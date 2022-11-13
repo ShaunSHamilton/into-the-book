@@ -457,7 +457,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo build --release');
 ```
 
-## 12
+## 23
 
 ### --description--
 
