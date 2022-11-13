@@ -189,14 +189,296 @@ assert.equal(lastCommand?.trim(), './hello');
 
 ### --description--
 
-Congratulations! You have written your first Rust program 🎉
+Along with `rustc`, `rustup` also installs the `cargo` package. Cargo is Rust's build system and package manager. Most _Rustaceans_ use Cargo to manage their Rust projects.
+
+Confirm you have successfully installed Cargo by running the following command:
+
+```bash
+cargo --version
+```
+
+### --tests--
+
+Run `cargo --version` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo --version');
+```
+
+## 11
+
+### --description--
+
+Remove the `hello` and `hello.rs` files from the `getting-started` directory.
+
+### --tests--
+
+The `getting-started/hello` file should not exist.
+
+```js
+const pathExists = __helpers.fileExists('getting-started/hello');
+assert.isFalse(pathExists);
+```
+
+The `getting-started/hello.rs` file should not exist.
+
+```js
+const pathExists = __helpers.fileExists('getting-started/hello.rs');
+assert.isFalse(pathExists);
+```
+
+## 12
+
+### --description--
+
+Use Cargo to create a new project called `hello_cargo` by running the following command:
+
+```bash
+cargo new hello_cargo
+```
+
+### --tests--
+
+Run `cargo new hello_cargo` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo new hello_cargo');
+```
+
+## 13
+
+### --description--
+
+Cargo has created a new directory and project called `hello_cargo`.
+
+Change into the `hello_cargo` directory.
+
+### --tests--
+
+You should be in the `getting-started/hello_cargo/` directory.
+
+```js
+const cwdFile = await __helpers.getCWD();
+const cwd = cwdFile.split('\n').filter(Boolean).pop();
+assert.include(cwd, 'getting-started/hello_cargo');
+```
+
+## 14
+
+### --description--
+
+Use the following command to list the contents of the `hello_cargo` directory:
+
+```bash
+ls
+```
+
+### --tests--
+
+Run `ls` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'ls');
+```
+
+## 15
+
+### --description--
+
+Cargo has created a `Cargo.toml` and a `src/main.rs` file. Also, Cargo initialised a Git repository.
+
+Run the following command to run the `hello_cargo` project:
+
+```bash
+cargo run
+```
+
+### --tests--
+
+Run `cargo run` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo run');
+```
+
+## 16
+
+### --description--
+
+Cargo has compiled the `hello_cargo` project and run it. You should see `Hello, world!` printed to the terminal.
+
+Open the `Cargo.toml` file. The first line, `[package]`, is a section heading that indicates that the following statements are configuring a package.
+
+Add the following line directly below the `[package]` heading:
+
+```toml
+author = "<YOUR_NAME>"
+```
+
+### --tests--
+
+Add `author = "<YOUR_NAME>"` to the `Cargo.toml` file.
+
+```js
+const fileContents = await __helpers.getFile(
+  'getting-started/hello_cargo/Cargo.toml'
+);
+assert.notInclude(
+  fileContents,
+  'author = "<YOUR_NAME>"',
+  'Do not literally add `author = "<YOUR_NAME>"` to the `Cargo.toml` file. Replace `<YOUR_NAME>` with your name.'
+);
+assert.match(fileContents, /author\s*=\s*"[^"]+"/);
+```
+
+## 17
+
+### --description--
+
+Re-run the `hello_cargo` project by running the following command:
+
+```bash
+cargo run
+```
+
+### --tests--
+
+Run `cargo run` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo run');
+```
+
+## 18
+
+### --description--
+
+There is a bit more output in the terminal than just the expected `Hello, world!`. The output comes from Cargo building the project.
+
+Instead of building and executing the project at the same time, use the following command to just build the project:
+
+```bash
+cargo build
+```
+
+### --tests--
+
+Run `cargo build` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo build');
+```
+
+## 19
+
+### --description--
+
+The `cargo build` command creates an executable file in `target/debug/hello_cargo`.
+
+You can manually run the executable file by running the following command:
+
+```bash
+./target/debug/hello_cargo
+```
+
+### --tests--
+
+Run `./target/debug/hello_cargo` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), './target/debug/hello_cargo');
+```
+
+## 20
+
+### --description--
+
+Cargo has also created a `Cargo.lock` file. This file keeps track of the exact versions of dependencies in the project. This project doesn't have dependencies, so the file is a bit sparse. You won't ever need to change this file manually; Cargo manages its contents for you.
+
+Build and execute the `hello_cargo` project with a single command.
+
+### --tests--
+
+Run `cargo run` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo run');
+```
+
+## 21
+
+### --description--
+
+Cargo also provides a command to quickly check the code to make sure it compiles, but doesn't produce an executable.
+
+Run the following command to check the code:
+
+```bash
+cargo check
+```
+
+### --tests--
+
+Run `cargo check` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo check');
+```
+
+## 22
+
+### --description--
+
+Recall, Cargo builds the project in a `target` directory. Currently, the executable is in the `debug` subdirectory. You can also build the project in a `release` configuration.
+
+A _'release'_ build compiles with optimizations that make the Rust code run faster, but turning them on lengthens the time it takes for the program to compile. This is why there are two different profiles: one for development, when you want to rebuild quickly and often, and another for building the final program you'll give to a user that won't be rebuilt repeatedly and that will run as fast as possible.
+
+Build a release version of the `hello_cargo` project by running the following command:
+
+```bash
+cargo build --release
+```
+
+### --tests--
+
+Run `cargo build --release` in the terminal.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.equal(lastCommand?.trim(), 'cargo build --release');
+```
+
+## 12
+
+### --description--
+
+**Summary**
+
+You're already off to a great start on your Rust journey! In this chapter, you've learned how to:
+
+- Install the latest stable version of Rust using rustup
+- Update to a newer Rust version
+- Open locally installed documentation
+- Write and run a "Hello, world!" program using rustc directly
+- Create and run a new project using the conventions of Cargo
+
+This is a great time to build a more substantial program to get used to reading and writing Rust code. So, in Chapter 2, we'll build a guessing game program. If you would rather start by learning how common programming concepts work in Rust, see Chapter 3 and then return to Chapter 2.
 
 ### --tests--
 
 🦀 🚀
 
 ```js
-assert.fail();
+assert.fail('Chapter 1 complete!');
 ```
 
 ## --fcc-end--
