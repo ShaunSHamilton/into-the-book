@@ -1,0 +1,11 @@
+{
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "freeCodeCamp.freecodecamp-courses@1.7.1",
+    "freeCodeCamp.freecodecamp-dark-vscode-theme"
+  ],
+  "forwardPorts": [8080],
+  "workspaceFolder": "/workspace/into-the-book",
+  "dockerFile": "../Dockerfile",
+  "context": ".."
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "id": 0,
+    "title": "1. Getting Started",
+    "dashedName": "getting-started",
+    "isIntegrated": false,
+    "description": "Install Rust, write a \"Hello, world!\" program, and use Cargo.",
+    "isPublic": true,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 1,
+    "title": "2. Programming a Guessing Game",
+    "dashedName": "programming-a-guessing-game",
+    "isIntegrated": false,
+    "description": "Learn about common programming concepts by writing a simple guessing game.",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 2,
+    "title": "3. Common Programming Concepts",
+    "dashedName": "common-programming-concepts",
+    "isIntegrated": false,
+    "description": "Learn about variables, functions, comments, and more.",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 3,
+    "title": "4. Understanding Ownership",
+    "dashedName": "understanding-ownership",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 4,
+    "title": "5. Using Structs to Structure Related Data",
+    "dashedName": "using-structs-to-structure-related-data",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 5,
+    "title": "6. Enums and Pattern Matching",
+    "dashedName": "enums-and-pattern-matching",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 6,
+    "title": "7. Managing Growing Projects with Packages, Crates, and Modules",
+    "dashedName": "managing-growing-projects-with-packages-crates-and-modules",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 7,
+    "title": "8. Common Collections",
+    "dashedName": "common-collections",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 8,
+    "title": "9. Error Handling",
+    "dashedName": "error-handling",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 9,
+    "title": "10. Generic Types, Traits, and Lifetimes",
+    "dashedName": "generic-types-traits-and-lifetimes",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 10,
+    "title": "11. Writing Automated Tests",
+    "dashedName": "writing-automated-tests",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 11,
+    "title": "12. An I/O Project: Building a Command Line Program",
+    "dashedName": "an-io-project-building-a-command-line-program",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 12,
+    "title": "13. Functional Language Features: Iterators and Closures",
+    "dashedName": "functional-language-features-iterators-and-closures",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 13,
+    "title": "14. More about Cargo and Crates.io",
+    "dashedName": "more-about-cargo-and-crates-io",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 14,
+    "title": "15. Smart Pointers",
+    "dashedName": "smart-pointers",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 15,
+    "title": "16. Fearless Concurrency",
+    "dashedName": "fearless-concurrency",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 16,
+    "title": "17. Object Oriented Programming Features of Rust",
+    "dashedName": "object-oriented-programming-features-of-rust",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 17,
+    "title": "18. Patterns and Matching",
+    "dashedName": "patterns-and-matching",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 18,
+    "title": "19. Advanced Features",
+    "dashedName": "advanced-features",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  },
+  {
+    "id": 19,
+    "title": "20. Final Project: Building a Multithreaded Web Server",
+    "dashedName": "final-project-building-a-multithreaded-web-server",
+    "isIntegrated": false,
+    "description": "Learn how to get started",
+    "isPublic": false,
+    "currentLesson": 1,
+    "runTestsOnWatch": true,
+    "isResetEnabled": false
+  }
+]
