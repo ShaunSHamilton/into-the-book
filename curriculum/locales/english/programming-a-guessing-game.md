@@ -616,7 +616,11 @@ assert.fail();
 
 The `std::cmp::Ordering` enum has three variants: `Less`, `Greater`, and `Equal`.
 
-Use a `match` expression to compare the `secret_number` to the `guess` variable:
+A `match` expression is made up of _arms_. An arm consists of a pattern to match against, and the code that should be run if the value given to `match` fist the arm's pattern.
+
+Rust takes the value given to `match` and looks through each arm's pattern in turn.
+
+Use a `match` expression to compare the `secret_number` to the `guess` variable.
 
 ```rust
 match guess.cmp(&secret_number) {
@@ -643,5 +647,157 @@ assert.fail();
 ## 31
 
 ### --description--
+
+Build the program to see the error message.
+
+### --tests--
+
+`cargo build` should be used to compile the program.
+
+```js
+assert.fail();
+```
+
+## 32
+
+### --description--
+
+Rust has a strong, static type system. However, it also has type <dfn>inference</dfn>. `guess` is a `String`, and `secret_number` is an `i32` (Rust's default). So, the reason for the error is that Rust cannot compare a string and a number type.
+
+To convert the `String` into a number, first trim the string of whitespace using the `trim` method on the `String` type, assigning the result to a new variable named `guess`. _Rust allows <dfn title="reusing a variable name within the same scope">shadowing</dfn>._
+
+```rust
+let guess = guess.trim();
+```
+
+### --tests--
+
+The `guess` variable should be shadowed with a new variable named `guess`.
+
+```js
+assert.fail();
+```
+
+The shadowed `guess` variable should be declared directly above the `println!` statement that prints `guess`.
+
+```js
+assert.fail();
+```
+
+## 33
+
+### --description--
+
+The `trim` method returns a string type. To convert into a number, chain the `parse` method to the `trim` method call, and add a type annotation of `u32` to the `parse` method call to tell Rust which type of number to parse the string into.
+
+```rust
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+
+Type annotations are commonly written in one of two ways:
+
+```rust
+let variable_of_type_i32: i32 = "42".parse().expect("Not a number!");
+let variable_of_type_i32 = "42".parse::<i32>().expect("Not a number!");
+```
+
+The first syntax is more common, and is used in this lesson.
+
+The second syntax is more fun, and is called _turbofish_ syntax.
+
+### --tests--
+
+The `parse` method should be called on the `trim` method call.
+
+```js
+assert.fail();
+```
+
+The `parse` method should be called with `expect("Please type a number!")` as an argument.
+
+```js
+assert.fail();
+```
+
+A type annotation of `u32` should be added to the `guess` declaration.
+
+```js
+assert.fail();
+```
+
+## 34
+
+### --description--
+
+Run the program, and enter a number.
+
+### --tests--
+
+`cargo run` should be used to compile and run the program.
+
+```js
+assert.fail();
+```
+
+## 35
+
+### --description--
+
+Currently, only one guess is allowed. To allow multiple guesses, add a `loop` to the program:
+
+```rust
+    // --snip--
+
+    println!("The secret number is: {secret_number}");
+
+    loop {
+        println!("Please input your guess.");
+
+        // --snip--
+
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
+        println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => println!("You win!"),
+        }
+    }
+}
+```
+
+### --tests--
+
+A `loop` should be added to the program.
+
+```js
+assert.fail();
+```
+
+The `loop` should be added directly below the `println!` statement that prints `secret_number`.
+
+```js
+assert.fail();
+```
+
+The `loop` should be closed at the end of the `main` function.
+
+```js
+assert.fail();
+```
+
+## 36
+
+### --description--
+
+A `loop` statment creates an infinite loop. The program can be interrupted with `Ctrl + C`.
 
 ## --fcc-end--
