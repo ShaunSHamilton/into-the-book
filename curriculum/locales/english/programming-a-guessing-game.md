@@ -297,7 +297,7 @@ assert.fail();
 
 ### --description--
 
-Re-build the program with `cargo build` to confirm the program now successfully compiles.
+Re-build the program with `cargo build` to confirm the program now successfully compiles without warnings.
 
 ### --tests--
 
@@ -424,10 +424,224 @@ assert.fail();
 
 ### --description--
 
+Cargo uses SemVer for crate versioning. `0.8.3` is shorthand for `^0.8.3`.
+
+If `rand` releases a new version, `cargo update` can be used to update the version used to the latest version that is compatible with the version specified in the `Cargo.toml` file.
+
+Run `cargo update`.
+
+### --tests--
+
+`cargo update` should be used to update the version of `rand` used.
+
+```js
+assert.fail();
+```
+
+## 21
+
+### --description--
+
 Within `src/main.rs`, use the `use` keyword to bring the `rand` crate into scope.
 
 ```rust
-use rand::Rng;
+use rand;
 ```
+
+### --tests--
+
+The `use` keyword should be used to bring the `rand` crate into scope.
+
+```js
+assert.fail();
+```
+
+## 22
+
+### --description--
+
+The `rand` crate exposes a function named `thread_rng` which retrieves the thread-local random number generator seeded by the system.
+
+Between the first two `println!` calls, declare a new variable named `secret_number` and set it equal to the result of calling the `thread_rng` function from the `rand` crate.
+
+### --tests--
+
+A new variable named `secret_number` should be declared.
+
+```js
+assert.fail();
+```
+
+`secret_number` should be declared within `main`.
+
+```js
+assert.fail();
+```
+
+`let secret_number = rand::thread_rng();` should be between the first two `println!` calls.
+
+```js
+assert.fail();
+```
+
+## 23
+
+### --description--
+
+The `thread_rng` function returns a random number generator, which is a type that implements the `Rng` trait.
+
+The `Rng` trait defines methods that random number generators implement, including the `gen_range` method, which generates a random number within a range.
+
+Chain the `gen_range` method to the `thread_rng` function call, passing `1..=100` as arguments to `gen_range`, to generate a random number between 1 and 100 inclusive:
+
+```rust
+let secret_number = rand::thread_rng().gen_range(1..=100);
+```
+
+### --tests--
+
+The `gen_range` method should be called on the `thread_rng` function call.
+
+```js
+assert.fail();
+```
+
+The `gen_range` method should be called with `1..=100` as an argument.
+
+```js
+assert.fail();
+```
+
+## 24
+
+### --description--
+
+Build the project, and read the error message.
+
+### --tests--
+
+`cargo build` should be used to compile the program.
+
+```js
+assert.fail();
+```
+
+## 25
+
+### --description--
+
+As mentioned in a previous lesson, the `gen_range` method is only available on types that implement the `Rng` trait. However, the `Rng` trait is not in scope.
+
+Follow the compiler's advice to bring the `Rng` trait into scope.
+
+### --tests--
+
+The `Rng` trait should be brought into scope with `use rand::Rng;`.
+
+```js
+assert.fail();
+```
+
+## 26
+
+### --description--
+
+Re-build the project to confirm the project successfully compiles.
+
+### --tests--
+
+`cargo build` should be used to compile the program.
+
+```js
+assert.fail();
+```
+
+## 27
+
+### --description--
+
+Below the `secret_number` declaration, add the following print statement:
+
+```rust
+println!("The secret number is: {}", secret_number);
+```
+
+Notice an alternative syntax for printing variables within the `println!` macro - the `{}` placeholder is used, and the variable name is passed as an argument to the macro.
+
+### --tests--
+
+The above `println!` expression should be added to the program.
+
+```js
+assert.fail();
+```
+
+The `println!` expression should be added directly below the `secret_number` declaration.
+
+```js
+assert.fail();
+```
+
+## 28
+
+### --description--
+
+Run the program to see the secret number printed to the terminal. Remember to enter a value, and hit the `Enter` key.
+
+### --tests--
+
+`cargo run` should be used to compile and run the program.
+
+```js
+assert.fail();
+```
+
+## 29
+
+### --description--
+
+To compare two values, bring the `std::cmp::Ordering` enum into scope.
+
+### --tests--
+
+The `Ordering` enum should be brought into scope with `use std::cmp::Ordering;`.
+
+```js
+assert.fail();
+```
+
+## 30
+
+### --description--
+
+The `std::cmp::Ordering` enum has three variants: `Less`, `Greater`, and `Equal`.
+
+Use a `match` expression to compare the `secret_number` to the `guess` variable:
+
+```rust
+match guess.cmp(&secret_number) {
+    Ordering::Less => println!("Too small!"),
+    Ordering::Greater => println!("Too big!"),
+    Ordering::Equal => println!("You win!"),
+}
+```
+
+### --tests--
+
+The above `match` expression should be used to compare the `secret_number` to the `guess` variable.
+
+```js
+assert.fail();
+```
+
+The `match` should be used directly below the `println!` statement that prints `guess`.
+
+```js
+assert.fail();
+```
+
+## 31
+
+### --description--
 
 ## --fcc-end--
