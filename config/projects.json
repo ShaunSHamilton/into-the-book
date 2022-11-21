@@ -16,7 +16,7 @@
     "dashedName": "programming-a-guessing-game",
     "isIntegrated": false,
     "description": "Learn about common programming concepts by writing a simple guessing game.",
-    "isPublic": false,
+    "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
     "isResetEnabled": false
@@ -26,8 +26,8 @@
     "title": "3. Common Programming Concepts",
     "dashedName": "common-programming-concepts",
     "isIntegrated": false,
-    "description": "Learn about variables, functions, comments, and more.",
-    "isPublic": false,
+    "description": "Learn about variables, basic types, functions, comments, and control flow.",
+    "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
     "isResetEnabled": false
