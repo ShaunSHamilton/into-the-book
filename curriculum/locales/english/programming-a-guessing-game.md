@@ -746,6 +746,7 @@ assert.fail();
 Currently, only one guess is allowed. To allow multiple guesses, add a `loop` to the program:
 
 ```rust
+fn main() {
     // --snip--
 
     println!("The secret number is: {secret_number}");
@@ -799,5 +800,147 @@ assert.fail();
 ### --description--
 
 A `loop` statment creates an infinite loop. The program can be interrupted with `Ctrl + C`.
+
+Otherwise, the program can be exited by crashing it when entering a non-number.
+
+Run the program, and enter something to crash it.
+
+### --tests--
+
+`cargo run` should be used to compile and run the program.
+
+```js
+assert.fail();
+```
+
+The program should crash when entering a non-number.
+
+```js
+assert.fail();
+```
+
+## 37
+
+### --description--
+
+To exit the loop when the correct number is guessed, add a `break` statement to the `match` expression.
+
+```rust
+match guess.cmp(&secret_number) {
+    Ordering::Less => println!("Too small!"),
+    Ordering::Greater => println!("Too big!"),
+    Ordering::Equal => {
+        println!("You win!");
+        break;
+    }
+}
+```
+
+### --tests--
+
+A `break` statement should be added to the `match` expression.
+
+```js
+assert.fail();
+```
+
+The `break` statement should be added directly below the `println!` statement that prints `"You win!"`.
+
+```js
+assert.fail();
+```
+
+## 38
+
+### --description--
+
+Run the program, and win the game.
+
+### --tests--
+
+`cargo run` should be used to compile and run the program.
+
+```js
+assert.fail();
+```
+
+## 39
+
+### --description--
+
+Instead of crashing the program when a non-number is entered, the loop can be continued - asking for another input.
+
+To do this, switch the `expect` call to a `match` expression, handling the two variants of the `Result` type returned by `parse`. Then, when the `Result` is an `Err`, invoke the `continue` statement:
+
+```rust
+let guess: u32 = match guess.trim().parse() {
+    Ok(num) => num,
+    Err(_) => continue,
+};
+```
+
+If `parse` is able to successfully turn the string into a number, it will return an `Ok` value that contains the resulting number. That `Ok` value will match the first arm's pattern, and the value is bound to a variable named `num`. The `num` variable is then returned from the match expression and assigned to the `guess` variable.
+
+### --tests--
+
+The `expect` call should be replaced with a `match` expression.
+
+```js
+assert.fail();
+```
+
+## 40
+
+### --description--
+
+Run the program, and try different inputs.
+
+### --tests--
+
+`cargo run` should be used to compile and run the program.
+
+```js
+assert.fail();
+```
+
+## 41
+
+### --description--
+
+Finally, instead of printing the random number, remove the `println!` statement that prints `secret_number`.
+
+### --tests--
+
+The `println!` statement that prints `secret_number` should be removed.
+
+```js
+assert.fail();
+```
+
+## 42
+
+### --description--
+
+**Summary**
+
+At this point, you have successfully built the guessing game. 🎉
+
+This project was a hands-on way to introduce you to:
+
+- `let`
+- `match`
+- Functions
+- External crates
+- `loop`
+
+Chapter 3 covers concepts that most programming languages have, such as variables, data types, and functions, and shows how to use them in Rust. Chapter 4 explores ownership, a feature that makes Rust different from other languages. Chapter 5 discusses structs and method syntax, and Chapter 6 explains how enums work.
+
+### --tests--
+
+🦀 🚀
+
+```js
+assert.fail('Chapter 2 complete!');
+```
 
 ## --fcc-end--
