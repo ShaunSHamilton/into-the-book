@@ -55,6 +55,6 @@
     }
   },
   "rust-analyzer.linkedProjects": [
-    "program-a-guessing-game/_answer/guessing_game/Cargo.toml"
+    "programming-a-guessing-game/_answer/guessing_game/Cargo.toml"
   ]
 }
