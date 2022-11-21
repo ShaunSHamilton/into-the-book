@@ -1,4 +1,4 @@
-# Rust - Program a Guessing Game
+# Rust - Programming a Guessing Game
 
 ## 1
 
