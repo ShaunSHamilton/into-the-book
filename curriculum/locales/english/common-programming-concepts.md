@@ -687,4 +687,212 @@ The `product` variable should not be changed.
 assert.fail();
 ```
 
+## 35
+
+### --description--
+
+Print the value of the `quotient` variable to the console.
+
+### --tests--
+
+The `quotient` variable should be printed to the console.
+
+```js
+assert.fail();
+```
+
+## 36
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 37
+
+### --description--
+
+Within the `main` function, declare a variable named `floored`, and set it equal to `2` divided by `3`.
+
+### --tests--
+
+A `floored` variable should be declared.
+
+```js
+assert.fail();
+```
+
+The `floored` variable should be declared within the `main` function.
+
+```js
+assert.fail();
+```
+
+The `floored` variable should be the division of two integers.
+
+```js
+assert.fail();
+```
+
+The `quotient` variable should not be changed.
+
+```js
+assert.fail();
+```
+
+## 38
+
+### --description--
+
+Print the value of the `floored` variable to the console.
+
+### --tests--
+
+The `floored` variable should be printed to the console.
+
+```js
+assert.fail();
+```
+
+## 39
+
+### --description--
+
+Run the program to see the output.
+
+_Notice that the result is `0` instead of `0.6666666666666666`._
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 40
+
+### --description--
+
+Within the `main` function, declare a variable named `remainder`, and set it equal to the remainder of two integers.
+
+### --tests--
+
+A `remainder` variable should be declared.
+
+```js
+assert.fail();
+```
+
+The `remainder` variable should be declared within the `main` function.
+
+```js
+assert.fail();
+```
+
+The `remainder` variable should be the remainder of two integers.
+
+```js
+assert.fail();
+```
+
+The `floored` variable should not be changed.
+
+```js
+assert.fail();
+```
+
+## 41
+
+### --description--
+
+Print the value of the `remainder` variable to the console.
+
+### --tests--
+
+The `remainder` variable should be printed to the console.
+
+```js
+assert.fail();
+```
+
+## 42
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 43
+
+### --description--
+
+**The Boolean Type**
+
+Rust has a Boolean type, which can only be `true` or `false`.
+
+Adjust the contents of the `main` function to be the following:
+
+```rust
+fn main() {
+  let waar = true;
+  let onwaar: bool = !waar;
+  println!("onwaar: {onwaar}");
+}
+```
+
+`!` is the logical negation operator.
+
+### --tests--
+
+The `main` function should be adjusted to the above code.
+
+```js
+assert.fail();
+```
+
+## 44
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 45
+
+### --description--
+
+Rust's `char` type is the most primitive alphabetic type. `char` literals are specified with single quotes, as opposed to double quotes, which are for string literals.
+
+Adjust the contents of the `main` function to be the following:
+
+```rust
+fn main() {
+    let c = 'z';
+    let z: char = 'ℤ';
+    let heart_eyed_cat = '😻';
+}
+```
+
 ## --fcc-end--
