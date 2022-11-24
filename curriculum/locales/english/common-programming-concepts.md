@@ -307,9 +307,25 @@ assert.fail();
 
 ### --description--
 
+**Data Types**
+
 Every value is of a certain data type. Rust is a <dfn>statically typed</dfn> language, but the compiler can still infer a type based on the value and how it is used.
 
-Replace all code in the `src/main.rs` file with the following:
+Within the `common-programming-concepts` directory, create a new project called `data-types`:
+
+### --tests--
+
+`cargo new data-types` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 17
+
+### --description--
+
+Adjust the `main` function to the following:
 
 ```rust
 fn main() {
@@ -894,5 +910,925 @@ fn main() {
     let heart_eyed_cat = '😻';
 }
 ```
+
+### --tests--
+
+The `main` function should be adjusted to the above code.
+
+```js
+assert.fail();
+```
+
+## 46
+
+### --description--
+
+To get an idea of the size of a `char`, add the following code to the `main` function:
+
+```rust
+println!("c: {}, z: {}, heart_eyed_cat: {}", std::mem::size_of_val(&c), std::mem::size_of_val(&z), std::mem::size_of_val(&heart_eyed_cat));
+```
+
+The `size_of_val` function from the `mem` module returns the size of the pointed-to value in bytes.
+
+### --tests--
+
+The `main` function should be adjusted to the above code.
+
+```js
+assert.fail();
+```
+
+## 47
+
+### --description--
+
+Run the program to see the output.
+
+_Notice that the size of a `char` is always 4 bytes._
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 48
+
+### --description--
+
+**Compound Types**
+
+Rust has two primitive compound types: tuples and arrays.
+
+**The Tuple Type**
+
+A tuple is a general way of grouping together a number of values with a variety of types into one compound type.
+
+Adjust the contents of the `main` function to be the following:
+
+```rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+
+### --tests--
+
+The `main` function should be adjusted to the above code.
+
+```js
+assert.fail();
+```
+
+## 49
+
+### --description--
+
+The variable `tup` binds to the entire tuple, because a tuple is considered a single compound element.
+
+To get the individual values out, use pattern matching to destructure the tuple value:
+
+```rust
+let (x, y, z) = tup;
+```
+
+### --tests--
+
+The `main` function should contain `let (x, y, z) = tup;`.
+
+```js
+assert.fail();
+```
+
+## 50
+
+### --description--
+
+Print the values of `x`, `y`, and `z` to the console.
+
+### --tests--
+
+The `println!` macro should be used to print the values of `x`, `y`, and `z` to the console.
+
+```js
+assert.fail();
+```
+
+## 51
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 52
+
+### --description--
+
+To directly access a tuple element, use a period (`.`) followed by the index of the value wanted:
+
+```rust
+let five_hundred = tup.0;
+let six_point_four = tup.1;
+let one = tup.2;
+```
+
+### --tests--
+
+The `main` function should contain `let five_hundred = tup.0;`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain `let six_point_four = tup.1;`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain `let one = tup.2;`.
+
+```js
+assert.fail();
+```
+
+## 53
+
+### --description--
+
+Print the values of `five_hundred`, `six_point_four`, and `one` to the console.
+
+### --tests--
+
+The `println!` macro should be used to print the values of `five_hundred`, `six_point_four`, and `one` to the console.
+
+```js
+assert.fail();
+```
+
+## 54
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 55
+
+### --description--
+
+Use the dot (`.`) operator to try change the value of the first element of the tuple to `6`.
+
+### --tests--
+
+The `main` function should contain `tup.0 = 6;`.
+
+```js
+assert.fail();
+```
+
+## 56
+
+### --description--
+
+Run the program to see what the compiler says.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 57
+
+### --description--
+
+Follow the compiler's advice to make the program compile.
+
+### --tests--
+
+The `tup` variable should be declared as mutable.
+
+```js
+assert.fail();
+```
+
+## 58
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 59
+
+### --description--
+
+A tuple without any values has a special name: <dfn>unit</dfn>. This value and its corresponding type are both written `()`, and represent an empty value or an empty return type.
+
+Expressions implicitly return the unit value if they do not return any other value.
+
+Within `main`, declare a variable `x` and set it to the unit value.
+
+### --tests--
+
+The `main` function should contain `let x = ();`.
+
+```js
+assert.fail();
+```
+
+## 60
+
+### --description--
+
+**The Array Type**
+
+Arrays contains a collection of multiple values. Unlike tuples, every element of an array must have the same type.
+
+```rust
+let a = [1, 2, 3, 4, 5];
+```
+
+Arrays are useful when the data can be <dfn>stack allocated</dfn>. Arrays are useful when the number of elements will not need to change.
+
+Adjust the contents of the `main` function to **only** contain a variable `months` that is an array of 12 string elements made up of the full names of the months.
+
+### --tests--
+
+The `main` function should contain a variable named `months`.
+
+```js
+assert.fail();
+```
+
+The `months` variable should be an array of 12 string elements.
+
+```js
+assert.fail();
+```
+
+The `months` variable should be an array of 12 string elements made up of the full names of the months.
+
+```js
+assert.fail();
+```
+
+## 61
+
+### --description--
+
+An array is a single chunk of memory of a known, fixed size that can be allocated on the stack. Elements of an array can be accessed using indexing:
+
+```rust
+let a = [1, 2, 3, 4, 5];
+let first = a[0];
+let second = a[1];
+```
+
+Within `main`, declare a variable `may`, and set it to the appropriate 😉 element of the `months` array.
+
+### --tests--
+
+The `main` function should contain a variable named `may`.
+
+```js
+assert.fail();
+```
+
+The `may` variable should be set to `months[4]`.
+
+```js
+assert.fail();
+```
+
+## 62
+
+### --description--
+
+Print the value of `may` to the console.
+
+### --tests--
+
+The `println!` macro should be used to print the value of `may` to the console.
+
+```js
+assert.fail();
+```
+
+## 63
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 64
+
+### --description--
+
+An array can be initialised with the same value for each element by specifying the initial value, followed by a semicolon, then the number of elements in the array in square brackets:
+
+```rust
+let a: [i32; 5] = [3; 5];
+```
+
+Within `main`, declare a variable `four_ones`, and set it to an array of 4 elements, each of which is the number `1`.
+
+### --tests--
+
+The `main` function should contain a variable named `four_ones`.
+
+```js
+assert.fail();
+```
+
+The `four_ones` variable should be set to `[1; 4]`.
+
+```js
+assert.fail();
+```
+
+## 65
+
+### --description--
+
+Print the value of `four_ones` to the console.
+
+### --tests--
+
+The `println!` macro should be used to print the value of `four_ones` to the console.
+
+```js
+assert.fail();
+```
+
+## 66
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 67
+
+### --description--
+
+An array's size is fixed. If you try to access an element using an index that is greater than or equal to the size of the array, the program will panic.
+
+Within `main`, try to access the 5th element of the `four_ones` array.
+
+### --tests--
+
+The `main` function should contain `four_ones[4];`.
+
+```js
+assert.fail();
+```
+
+## 68
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 69
+
+### --description--
+
+**Functions**
+
+So far, only the `main` function has been used. As it is the entry point of the program, it does not need to be explicitly called.
+
+Within the `common-programming-concepts/` directory, create a new project named `functions`.
+
+### --tests--
+
+`cargo new functions` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 70
+
+### --description--
+
+Define a function named `another_function` that prints the string `Another function.` to the console.
+
+### --tests--
+
+The `main` function should contain a function named `another_function`.
+
+```js
+assert.fail();
+```
+
+The `another_function` function should print the string `Another function.` to the console.
+
+```js
+assert.fail();
+```
+
+## 70
+
+### --description--
+
+Functions defined in the same scope as `main` are called top-level functions. They can be called from anywhere within the scope of `main`. This is similar to the way some interpreted languages hoist functions to the top of the file.
+
+Call the `another_function` function within the `main` function.
+
+### --tests--
+
+The `main` function should contain a call to the `another_function` function.
+
+```js
+assert.fail();
+```
+
+## 71
+
+**Parameters**
+
+Functions can accept arguments which are specified in the function's signature. These are called <dfn title="A variable in a method definition. When a method is called, the arguments are the data you pass into the method's parameters.">parameters</dfn>.
+
+```rust
+fn print_number(a: String) {
+    println!("a is: {}", a);
+}
+```
+
+Adjust the definition of the `another_function` function to accept a parameter named `x` of type `i32`, and adjust the `println!` macro to print the value of `x` to the console.
+
+### --tests--
+
+The `another_function` function should accept a parameter named `x` of type `i32`.
+
+```js
+assert.fail();
+```
+
+The `println!` macro should be used to print the value of `x` to the console.
+
+```js
+assert.fail();
+```
+
+## 72
+
+### --description--
+
+Multiple parameters can be specified in a function's signature. The parameters are separated by commas.
+
+```rust
+fn print_sum(a: i32, b: i32) {
+    println!("sum is: {}", a + b);
+}
+```
+
+Define a new function named `print_labeled_measurement` that accepts two parameters: `value` of type `i32`, and `unit_label` of type `char`. The function should print `"The measurement is: {value}{unit_label}"` to the console.
+
+### --tests--
+
+A new function named `print_labeled_measurement` should be declared.
+
+```js
+assert.fail();
+```
+
+The `print_labeled_measurement` function should accept two parameters: `value` of type `i32`, and `unit_label` of type `char`.
+
+```js
+assert.fail();
+```
+
+The `println!` macro should be used to print `"The measurement is: {value}{unit_label}"` to the console.
+
+```js
+assert.fail();
+```
+
+## 73
+
+### --description--
+
+Call the `print_labeled_measurement` function within the `main` function, passing in correct values for the parameters.
+
+### --tests--
+
+The `main` function should contain a call to the `print_labeled_measurement` function.
+
+```js
+assert.fail();
+```
+
+## 74
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 75
+
+### --description--
+
+**Statements and Expressions**
+
+Function bodies are made up of a series of <dfn title="instructions that perform some action and do not return a value">statements</dfn> optionally ending in an <dfn title="code evaluating to a value">expression</dfn>. Rust is an expression-based language.
+
+Declare two new functions: `statement` and `expression`.
+
+### --tests--
+
+Two new functions named `statement` and `expression` should be declared.
+
+```js
+assert.fail();
+```
+
+## 76
+
+### --description--
+
+Creating a variable and assigning a value to it with the `let` keyword is an example of a statement.
+
+Within the `statement` function, declare a variable named `y` and set it to the value `6`.
+
+### --tests--
+
+The `statement` function should contain a variable named `y`.
+
+```js
+assert.fail();
+```
+
+The `y` variable should be set to the value `6`.
+
+```js
+assert.fail();
+```
+
+## 77
+
+### --description--
+
+Function definitions are also statements. As statements do not return values, a `let` statement cannot be assigned to another variable.
+
+Within the `statement` function, add the following line:
+
+```rust
+let x = (let y = 6);
+```
+
+### --tests--
+
+The `statement` function should contain the line `let x = (let y = 6);`.
+
+```js
+assert.fail();
+```
+
+## 78
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 79
+
+### --description--
+
+Remove the incorrect line from the `statement` function.
+
+### --tests--
+
+The `statement` function should not contain the line `let x = (let y = 6);`.
+
+```js
+assert.fail();
+```
+
+## 80
+
+### --description--
+
+Expressions evaluate to a value. Calling a function is an example of an expression.
+
+Within the `expression` function, add the following code:
+
+```rust
+let y = {
+    let x = 3;
+    x + 1
+};
+println!("The value of y is: {}", y);
+```
+
+### --tests--
+
+The `expression` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 80
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 81
+
+### --description--
+
+Call the `statement` and `expression` functions within the `main` function.
+
+### --tests--
+
+The `main` function should contain a call to the `statement` function.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain a call to the `expression` function.
+
+```js
+assert.fail();
+```
+
+## 82
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 83
+
+### --description--
+
+**Return Values**
+
+Functions can return values to the code that calls them. In Rust, the return value of the function is synonymous with the value of the final expression in the block of the body of a function. You can return early from a function by using the return keyword and specifying a value, but most functions return the last expression implicitly:
+
+```rust
+fn return_string() -> String {
+    let s = String::from("hello");
+    s
+}
+// Equivalent to:
+fn return_string() -> String {
+    let s = String::from("hello");
+    return s;
+}
+```
+
+Define a new function named `five` that returns the value `5`.
+
+### --tests--
+
+A new function named `five` should be declared.
+
+```js
+assert.fail();
+```
+
+The `five` function should return the value `5`.
+
+```js
+assert.fail();
+```
+
+The `five` function should be typed to return `-> i32`.
+
+```js
+assert.fail();
+```
+
+## 84
+
+### --description--
+
+Call the `five` function within the `main` function, and assign it to a variable named `five_returned`.
+
+### --tests--
+
+The `main` function should contain a call to the `five` function.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain a variable named `five_returned`.
+
+```js
+assert.fail();
+```
+
+## 85
+
+Within `main`, print the value of `five_returned` to the console.
+
+### --tests--
+
+The `main` function should contain a call to the `println!` macro.
+
+```js
+assert.fail();
+```
+
+## 86
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 87
+
+### --description--
+
+**Comments**
+
+In Rust, the idiomatic comment style starts a comment with two slashes, and the comment continues until the end of the line. For comments that extend beyond a single line, include `//` on each line.
+
+Within the `common-programming-concepts/` directory, create a new project named `comments`.
+
+### --tests--
+
+`cargo new comments` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 88
+
+### --description--
+
+Here is a simple comment:
+
+```rust
+// hello, world
+```
+
+Within the `main` function, add a comment directly above the `println!` macro.
+
+### --tests--
+
+The `main` function should contain a comment directly above the `println!` macro.
+
+```js
+assert.fail();
+```
+
+## 89
+
+### --description--
+
+Comments can also be added to the end of a line of code:
+
+```rust
+let x = 5; // this is a comment
+```
+
+Within the `main` function, add a comment on the same line as the `println!` macro.
+
+### --tests--
+
+The `main` function should contain a comment on the same line as the `println!` macro.
+
+```js
+assert.fail();
+```
+
+## 90
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 91
+
+### --description--
+
+**Control Flow**
+
+The ability to run some code depending on if a condition is true, or run some code repeatedly while a condition is true, are basic building blocks in most programming languages. The most common constructs that let you control the flow of execution of Rust code are `if` expressions and loops.
+
+Within the `common-programming-concepts/` directory, create a new project named `control-flow`.
+
+### --tests--
+
+`cargo new control-flow` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 92
+
+### --description--
+
+**`if` Expressions**
+
+An `if` expression allows code to branch depending on conditions.
 
 ## --fcc-end--
