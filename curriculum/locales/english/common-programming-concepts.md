@@ -1829,6 +1829,655 @@ assert.fail();
 
 **`if` Expressions**
 
-An `if` expression allows code to branch depending on conditions.
+An `if` expression allows code to branch depending on conditions. All `if` expressions start with the keyword `if`, followed by a condition. Sometimes, blocks of code associated with the conditions are called _arms_:
+
+```rust
+if condition {
+    // code to run if the condition is true
+} else { // optional else expression
+    // code to run if the condition is false
+}
+```
+
+Within the `main` function, declare a variable named `number` and assign it the value `3`. Then, add an `if` expression that prints `"condition was true"` if `number < 5`, and prints `"condition was false"` otherwise.
+
+### --tests--
+
+The `main` function should contain a variable named `number`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain an `if` expression.
+
+```js
+assert.fail();
+```
+
+The `if` expression should print `"condition was true"` if `number < 5`.
+
+```js
+assert.fail();
+```
+
+The `if` expression should print `"condition was false"` otherwise.
+
+```js
+assert.fail();
+```
+
+## 93
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 94
+
+### --description--
+
+Conditions must be a `bool`.
+
+Change the `if` condition to just `number` - _some languages allow implicit conversion of non-boolean values to boolean values, but Rust does not_.
+
+### --tests--
+
+The `if` expression should start `if number {`.
+
+```js
+assert.fail();
+```
+
+## 95
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 96
+
+### --description--
+
+Multiple conditions can be combined using `else if`:
+
+```rust
+if condition_1 {
+
+} else if condition_2 {
+
+} else {
+
+}
+```
+
+Within the `main` function, add an `else if` expression that prints `"number is divisible by 4"` if `number % 4 == 0`, and prints `"number is not divisible by 4"` otherwise.
+
+### --tests--
+
+The `main` function should contain an `else if` expression.
+
+```js
+assert.fail();
+```
+
+The `else if` expression should print `"number is divisible by 4"` if `number % 4 == 0`.
+
+```js
+assert.fail();
+```
+
+The `else if` expression should print `"number is not divisible by 4"` otherwise.
+
+```js
+assert.fail();
+```
+
+## 97
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 98
+
+### --description--
+
+Expressions evaluate to a value. So, you can use an `if` expression in a `let` statement:
+
+```rust
+let condition = true;
+let number = if condition { 5 } else { 6 };
+```
+
+Adjust the `main` function to assign the value of `1` to a variable named `bin` if `number` is even, and assign the value of `0` otherwise.
+
+### --tests--
+
+The `main` function should contain a variable named `bin`.
+
+```js
+assert.fail();
+```
+
+`bin` should be assigned the value of `1` if `number % 2 == 0`.
+
+```js
+assert.fail();
+```
+
+`bin` should be assigned the value of `0` otherwise.
+
+```js
+assert.fail();
+```
+
+## 99
+
+### --description--
+
+**Repetition with Loops**
+
+It is often useful to execute a block of code more than once. Rust has three kinds of loops: `loop`, `while`, and `for`.
+
+Within the `common-programming-concepts/` directory, create a new project named `loops`.
+
+### --tests--
+
+`cargo new loops` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 100
+
+### --description--
+
+**Repeating Code with `loop`**
+
+The `loop` keyword tells Rust to execute a block of code over and over again forver or until explicitly told to stop:
+
+```rust
+fn main() {
+    loop {
+      // code to repeatedly run
+    }
+}
+```
+
+Within the `main` function, add a `loop` expression that prints `"again!"` to the console.
+
+### --tests--
+
+The `main` function should contain a `loop` expression.
+
+```js
+assert.fail();
+```
+
+The `loop` expression should print `"again!"`.
+
+```js
+assert.fail();
+```
+
+## 101
+
+### --description--
+
+Run the program to see the output. **Press `Ctrl+C` to stop the program.**
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 102
+
+### --description--
+
+Rust also provides a programatic way to break out of a loop. The `break` keyword tells the program when to stop executing a loop.
+
+Within the `loop` expression, after the `println!` statement, add a `break` statement.
+
+### --tests--
+
+The `loop` expression should contain a `break` statement.
+
+```js
+assert.fail();
+```
+
+## 103
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 104
+
+### --description--
+
+As `loop` expressions are _expressions_, they can be used to return a value, by placing the value after the `break` keyword.
+
+Within the `main` function, add the following:
+
+```rust
+let mut counter = 0;
+
+let result = loop {
+    counter += 1;
+    if counter == 10 {
+        break counter * 2;
+    }
+}
+
+println!("result: {result}");
+```
+
+### --tests--
+
+The `main` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 105
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 106
+
+### --description--
+
+Programs can end up with loops nested within loops. So, in order to early return from a loop, a loop label can be specified that can be used with `break` or `continue` statements.
+
+Adjust the `main` function to:
+
+```rust
+fn main() {
+    let mut count = 0;
+
+    // Label the outermost loop as "counting_up"
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                // Early return from the outermost loop
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+}
+```
+
+### --tests--
+
+The `main` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 107
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 108
+
+### --description--
+
+**Conditional Loops with `while`**
+
+A program will often need to evaluate a condition within a loop. While the condition is true, the loop runs. When the condition ceases to be true, the program calls `break`, stopping the loop. Whilst possible to implement behavior like this using a combination of `loop`, `if`, `else`, and `break`, Rust has a built-in language construct for this kind of loop: `while`.
+
+Adjust the `main` function to be:
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    loop {
+        println!("{number}!");
+
+        number -= 1;
+
+        if number == 0 {
+            break;
+        }
+    }
+
+    println!("LIFTOFF!!!");
+}
+```
+
+### --tests--
+
+The `main` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 109
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 110
+
+### --description--
+
+The same logic can be implemented using a `while` loop. Adjust the `main` function to be:
+
+```rust
+fn main() {
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!");
+}
+```
+
+This eliminates a lot of nesting, and is clearer; while a condition holds true, the code runs, otherwise it exits the loop.
+
+### --tests--
+
+The `main` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 111
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 112
+
+### --description--
+
+**Looping Through a Collection with `for`**
+
+The `for` loop is used to iterate over a collection (e.g. an array or a vector). The syntax is:
+
+```rust
+let collection = [1, 2, 3, 4, 5];
+
+for element in collection {
+    // code to execute for each element
+}
+```
+
+Adjust the `main` function to declare an array `a` with the values `1` through `5` inclusive, and then use a `for` loop to print each element of the array.
+
+### --tests--
+
+The `main` function should contain a variable `a`.
+
+```js
+assert.fail();
+```
+
+`a` should be `[1, 2, 3, 4, 5]`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain a `for` loop.
+
+```js
+assert.fail();
+```
+
+The `for` loop should print each element of the array.
+
+```js
+assert.fail();
+```
+
+## 113
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 114
+
+### --description--
+
+Instead of individually declaring each number in the `a` array, Rust provides a range operator `..` that can be used to create a range of values:
+
+```rust
+for i in 1..5 {
+    println!("i = {i}"); // prints 1, 2, 3, 4
+}
+
+for i in 1..=5 {
+    println!("i = {i}"); // prints 1, 2, 3, 4, 5
+}
+```
+
+Adjust the `main` function to use the range operator to create the `a` array.
+
+### --tests--
+
+The `main` function should contain a variable `a`.
+
+```js
+assert.fail();
+```
+
+`a` should be `(1..=5)`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain a `for` loop.
+
+```js
+assert.fail();
+```
+
+The `for` loop should be `for i in a`.
+
+```js
+assert.fail();
+```
+
+The `for` loop should print each element of the array.
+
+```js
+assert.fail();
+```
+
+## 115
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 116
+
+### --description--
+
+A handy method on the `Range` type is `rev`, which reverses the range. Adjust the `a` declaration to use `rev` to print the numbers in reverse order.
+
+### --tests--
+
+The `main` function should contain a variable `a`.
+
+```js
+assert.fail();
+```
+
+`a` should be `(1..=5).rev()`.
+
+```js
+assert.fail();
+```
+
+The `main` function should contain a `for` loop.
+
+```js
+assert.fail();
+```
+
+The `for` loop should be `for i in a`.
+
+```js
+assert.fail();
+```
+
+The `for` loop should print each element of the array.
+
+```js
+assert.fail();
+```
+
+## 117
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 118
+
+### --description--
+
+**Summary**
+
+You made it! That was a sizable chapter: you learned about variables, scalar and compound data types, functions, comments, if expressions, and loops! To practice with the concepts discussed in this chapter, try building programs to do the following:
+
+- Convert temperatures between Fahrenheit and Celsius.
+- Generate the nth Fibonacci number.
+- Print the lyrics to the Christmas carol "The Twelve Days of Christmas," taking advantage of the repetition in the song.
+
+When you are ready to move on, you will learn about a concept in Rust that does not commonly exist in other programming languages: _ownership_.
+
+### --tests--
+
+🦀 🚀
+
+```js
+assert.fail('Chapter 3 complete!');
+```
 
 ## --fcc-end--
