@@ -32,3 +32,122 @@ code .
 ### With Gitpod
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ShaunSHamilton/into-the-book)
+
+## Roadmap
+
+<style>
+  td {
+    text-align: center;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Chapter</th>
+    <th colspan="2">Status</th>
+  </tr>
+  <tr>
+    <td colspan="1" rowspan="1"></td>
+    <th>Content</th>
+    <th>Tests</th>
+  <tr>
+    <td>Chapter 1</td>
+    <td>✅</td>
+    <td>❌</td>
+ </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/1">Chapter 2</a></td>
+    <td>✅</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/2">Chapter 3</a></td>
+    <td>✅</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/3">Chapter 4</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/4">Chapter 5</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/5">Chapter 6</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/6">Chapter 7</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/7">Chapter 8</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/8">Chapter 9</a></td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 10</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 11</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 12</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 13</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 14</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 15</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 16</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 17</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 18</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 19</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>Chapter 20</td>
+    <td>❌</td>
+    <td>❌</td>
+  </tr>
+</table>
