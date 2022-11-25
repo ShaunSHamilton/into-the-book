@@ -39,13 +39,7 @@ code .
 
 ## Roadmap
 
-<style>
-  td {
-    text-align: center;
-  }
-</style>
-
-<table>
+<table style="text-align: center;">
   <tr>
     <th>Chapter</th>
     <th colspan="2">Status</th>
