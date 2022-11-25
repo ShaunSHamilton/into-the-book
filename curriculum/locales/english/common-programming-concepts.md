@@ -321,7 +321,7 @@ Within the `common-programming-concepts` directory, create a new project called 
 assert.fail();
 ```
 
-## 17
+## 18
 
 ### --description--
 
@@ -341,7 +341,7 @@ The `src/main.rs` file should contain the above code.
 assert.fail();
 ```
 
-## 18
+## 19
 
 ### --description--
 
@@ -355,7 +355,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 19
+## 20
 
 ### --description--
 
@@ -377,7 +377,7 @@ The `src/main.rs` file should contain the above code.
 assert.fail();
 ```
 
-## 20
+## 21
 
 ### --description--
 
@@ -391,7 +391,7 @@ Run the program to confirm there is no longer a type error.
 assert.fail();
 ```
 
-## 21
+## 22
 
 ### --description--
 
@@ -425,7 +425,7 @@ The `guess` variable should be of a signed integer type.
 assert.fail();
 ```
 
-## 22
+## 23
 
 ### --description--
 
@@ -456,7 +456,7 @@ The `src/main.rs` file should contain the above code.
 assert.fail();
 ```
 
-## 23
+## 24
 
 ### --description--
 
@@ -470,7 +470,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 24
+## 25
 
 ### --description--
 
@@ -486,7 +486,7 @@ The `num` variable should be of a different number literal type.
 assert.fail();
 ```
 
-## 25
+## 26
 
 ### --description--
 
@@ -504,7 +504,7 @@ The `num` variable should be of a floating-point type.
 assert.fail();
 ```
 
-## 26
+## 27
 
 ### --description--
 
@@ -537,7 +537,7 @@ The `src/main.rs` file should contain the above code.
 assert.fail();
 ```
 
-## 27
+## 28
 
 ### --description--
 
@@ -551,7 +551,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 28
+## 29
 
 ### --description--
 
@@ -583,7 +583,7 @@ The `sum` variable should not be changed.
 assert.fail();
 ```
 
-## 29
+## 30
 
 ### --description--
 
@@ -597,7 +597,7 @@ The `difference` variable should be printed to the console.
 assert.fail();
 ```
 
-## 30
+## 31
 
 ### --description--
 
@@ -611,7 +611,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 31
+## 32
 
 ### --description--
 
@@ -643,7 +643,7 @@ The `difference` variable should not be changed.
 assert.fail();
 ```
 
-## 32
+## 33
 
 ### --description--
 
@@ -657,7 +657,7 @@ The `product` variable should be printed to the console.
 assert.fail();
 ```
 
-## 33
+## 34
 
 ### --description--
 
@@ -671,7 +671,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 34
+## 35
 
 ### --description--
 
@@ -703,7 +703,7 @@ The `product` variable should not be changed.
 assert.fail();
 ```
 
-## 35
+## 36
 
 ### --description--
 
@@ -717,7 +717,7 @@ The `quotient` variable should be printed to the console.
 assert.fail();
 ```
 
-## 36
+## 37
 
 ### --description--
 
@@ -731,7 +731,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 37
+## 38
 
 ### --description--
 
@@ -763,7 +763,7 @@ The `quotient` variable should not be changed.
 assert.fail();
 ```
 
-## 38
+## 39
 
 ### --description--
 
@@ -777,7 +777,7 @@ The `floored` variable should be printed to the console.
 assert.fail();
 ```
 
-## 39
+## 40
 
 ### --description--
 
@@ -793,7 +793,7 @@ _Notice that the result is `0` instead of `0.6666666666666666`._
 assert.fail();
 ```
 
-## 40
+## 41
 
 ### --description--
 
@@ -825,7 +825,7 @@ The `floored` variable should not be changed.
 assert.fail();
 ```
 
-## 41
+## 42
 
 ### --description--
 
@@ -839,7 +839,7 @@ The `remainder` variable should be printed to the console.
 assert.fail();
 ```
 
-## 42
+## 43
 
 ### --description--
 
@@ -853,7 +853,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 43
+## 44
 
 ### --description--
 
@@ -881,7 +881,7 @@ The `main` function should be adjusted to the above code.
 assert.fail();
 ```
 
-## 44
+## 45
 
 ### --description--
 
@@ -895,7 +895,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 45
+## 46
 
 ### --description--
 
@@ -919,7 +919,7 @@ The `main` function should be adjusted to the above code.
 assert.fail();
 ```
 
-## 46
+## 47
 
 ### --description--
 
@@ -939,7 +939,7 @@ The `main` function should be adjusted to the above code.
 assert.fail();
 ```
 
-## 47
+## 48
 
 ### --description--
 
@@ -955,7 +955,7 @@ _Notice that the size of a `char` is always 4 bytes._
 assert.fail();
 ```
 
-## 48
+## 49
 
 ### --description--
 
@@ -983,7 +983,7 @@ The `main` function should be adjusted to the above code.
 assert.fail();
 ```
 
-## 49
+## 50
 
 ### --description--
 
@@ -1003,7 +1003,7 @@ The `main` function should contain `let (x, y, z) = tup;`.
 assert.fail();
 ```
 
-## 50
+## 51
 
 ### --description--
 
@@ -1017,7 +1017,7 @@ The `println!` macro should be used to print the values of `x`, `y`, and `z` to 
 assert.fail();
 ```
 
-## 51
+## 52
 
 ### --description--
 
@@ -1031,7 +1031,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 52
+## 53
 
 ### --description--
 
@@ -1063,7 +1063,7 @@ The `main` function should contain `let one = tup.2;`.
 assert.fail();
 ```
 
-## 53
+## 54
 
 ### --description--
 
@@ -1077,7 +1077,7 @@ The `println!` macro should be used to print the values of `five_hundred`, `six_
 assert.fail();
 ```
 
-## 54
+## 55
 
 ### --description--
 
@@ -1091,7 +1091,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 55
+## 56
 
 ### --description--
 
@@ -1105,7 +1105,7 @@ The `main` function should contain `tup.0 = 6;`.
 assert.fail();
 ```
 
-## 56
+## 57
 
 ### --description--
 
@@ -1119,7 +1119,7 @@ Run the program to see what the compiler says.
 assert.fail();
 ```
 
-## 57
+## 58
 
 ### --description--
 
@@ -1133,7 +1133,7 @@ The `tup` variable should be declared as mutable.
 assert.fail();
 ```
 
-## 58
+## 59
 
 ### --description--
 
@@ -1147,7 +1147,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 59
+## 60
 
 ### --description--
 
@@ -1165,7 +1165,7 @@ The `main` function should contain `let x = ();`.
 assert.fail();
 ```
 
-## 60
+## 61
 
 ### --description--
 
@@ -1201,7 +1201,7 @@ The `months` variable should be an array of 12 string elements made up of the fu
 assert.fail();
 ```
 
-## 61
+## 62
 
 ### --description--
 
@@ -1229,7 +1229,7 @@ The `may` variable should be set to `months[4]`.
 assert.fail();
 ```
 
-## 62
+## 63
 
 ### --description--
 
@@ -1243,7 +1243,7 @@ The `println!` macro should be used to print the value of `may` to the console.
 assert.fail();
 ```
 
-## 63
+## 64
 
 ### --description--
 
@@ -1257,7 +1257,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 64
+## 65
 
 ### --description--
 
@@ -1283,7 +1283,7 @@ The `four_ones` variable should be set to `[1; 4]`.
 assert.fail();
 ```
 
-## 65
+## 66
 
 ### --description--
 
@@ -1297,7 +1297,7 @@ The `println!` macro should be used to print the value of `four_ones` to the con
 assert.fail();
 ```
 
-## 66
+## 67
 
 ### --description--
 
@@ -1311,7 +1311,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 67
+## 68
 
 ### --description--
 
@@ -1327,7 +1327,7 @@ The `main` function should contain `four_ones[4];`.
 assert.fail();
 ```
 
-## 68
+## 69
 
 ### --description--
 
@@ -1341,7 +1341,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 69
+## 70
 
 ### --description--
 
@@ -1359,7 +1359,7 @@ Within the `common-programming-concepts/` directory, create a new project named 
 assert.fail();
 ```
 
-## 70
+## 71
 
 ### --description--
 
@@ -1379,7 +1379,7 @@ The `another_function` function should print the string `Another function.` to t
 assert.fail();
 ```
 
-## 70
+## 72
 
 ### --description--
 
@@ -1395,7 +1395,7 @@ The `main` function should contain a call to the `another_function` function.
 assert.fail();
 ```
 
-## 71
+## 73
 
 **Parameters**
 
@@ -1423,7 +1423,7 @@ The `println!` macro should be used to print the value of `x` to the console.
 assert.fail();
 ```
 
-## 72
+## 74
 
 ### --description--
 
@@ -1457,7 +1457,7 @@ The `println!` macro should be used to print `"The measurement is: {value}{unit_
 assert.fail();
 ```
 
-## 73
+## 75
 
 ### --description--
 
@@ -1471,7 +1471,7 @@ The `main` function should contain a call to the `print_labeled_measurement` fun
 assert.fail();
 ```
 
-## 74
+## 76
 
 ### --description--
 
@@ -1485,7 +1485,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 75
+## 77
 
 ### --description--
 
@@ -1503,7 +1503,7 @@ Two new functions named `statement` and `expression` should be declared.
 assert.fail();
 ```
 
-## 76
+## 78
 
 ### --description--
 
@@ -1525,7 +1525,7 @@ The `y` variable should be set to the value `6`.
 assert.fail();
 ```
 
-## 77
+## 79
 
 ### --description--
 
@@ -1540,58 +1540,6 @@ let x = (let y = 6);
 ### --tests--
 
 The `statement` function should contain the line `let x = (let y = 6);`.
-
-```js
-assert.fail();
-```
-
-## 78
-
-### --description--
-
-Run the program to see the output.
-
-### --tests--
-
-`cargo run` should be run in the terminal.
-
-```js
-assert.fail();
-```
-
-## 79
-
-### --description--
-
-Remove the incorrect line from the `statement` function.
-
-### --tests--
-
-The `statement` function should not contain the line `let x = (let y = 6);`.
-
-```js
-assert.fail();
-```
-
-## 80
-
-### --description--
-
-Expressions evaluate to a value. Calling a function is an example of an expression.
-
-Within the `expression` function, add the following code:
-
-```rust
-let y = {
-    let x = 3;
-    x + 1
-};
-println!("The value of y is: {}", y);
-```
-
-### --tests--
-
-The `expression` function should contain the above code.
 
 ```js
 assert.fail();
@@ -1615,6 +1563,58 @@ assert.fail();
 
 ### --description--
 
+Remove the incorrect line from the `statement` function.
+
+### --tests--
+
+The `statement` function should not contain the line `let x = (let y = 6);`.
+
+```js
+assert.fail();
+```
+
+## 82
+
+### --description--
+
+Expressions evaluate to a value. Calling a function is an example of an expression.
+
+Within the `expression` function, add the following code:
+
+```rust
+let y = {
+    let x = 3;
+    x + 1
+};
+println!("The value of y is: {}", y);
+```
+
+### --tests--
+
+The `expression` function should contain the above code.
+
+```js
+assert.fail();
+```
+
+## 83
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the terminal.
+
+```js
+assert.fail();
+```
+
+## 84
+
+### --description--
+
 Call the `statement` and `expression` functions within the `main` function.
 
 ### --tests--
@@ -1631,7 +1631,7 @@ The `main` function should contain a call to the `expression` function.
 assert.fail();
 ```
 
-## 82
+## 85
 
 ### --description--
 
@@ -1645,7 +1645,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 83
+## 86
 
 ### --description--
 
@@ -1687,7 +1687,7 @@ The `five` function should be typed to return `-> i32`.
 assert.fail();
 ```
 
-## 84
+## 87
 
 ### --description--
 
@@ -1707,7 +1707,7 @@ The `main` function should contain a variable named `five_returned`.
 assert.fail();
 ```
 
-## 85
+## 88
 
 Within `main`, print the value of `five_returned` to the console.
 
@@ -1719,7 +1719,7 @@ The `main` function should contain a call to the `println!` macro.
 assert.fail();
 ```
 
-## 86
+## 89
 
 ### --description--
 
@@ -1733,7 +1733,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 87
+## 90
 
 ### --description--
 
@@ -1751,7 +1751,7 @@ Within the `common-programming-concepts/` directory, create a new project named 
 assert.fail();
 ```
 
-## 88
+## 91
 
 ### --description--
 
@@ -1771,7 +1771,7 @@ The `main` function should contain a comment directly above the `println!` macro
 assert.fail();
 ```
 
-## 89
+## 92
 
 ### --description--
 
@@ -1791,7 +1791,7 @@ The `main` function should contain a comment on the same line as the `println!` 
 assert.fail();
 ```
 
-## 90
+## 93
 
 ### --description--
 
@@ -1805,7 +1805,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 91
+## 94
 
 ### --description--
 
@@ -1823,7 +1823,7 @@ Within the `common-programming-concepts/` directory, create a new project named 
 assert.fail();
 ```
 
-## 92
+## 95
 
 ### --description--
 
@@ -1867,7 +1867,7 @@ The `if` expression should print `"condition was false"` otherwise.
 assert.fail();
 ```
 
-## 93
+## 96
 
 ### --description--
 
@@ -1881,7 +1881,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 94
+## 97
 
 ### --description--
 
@@ -1897,7 +1897,7 @@ The `if` expression should start `if number {`.
 assert.fail();
 ```
 
-## 95
+## 98
 
 ### --description--
 
@@ -1911,7 +1911,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 96
+## 99
 
 ### --description--
 
@@ -1949,7 +1949,7 @@ The `else if` expression should print `"number is not divisible by 4"` otherwise
 assert.fail();
 ```
 
-## 97
+## 100
 
 ### --description--
 
@@ -1963,7 +1963,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 98
+## 101
 
 ### --description--
 
@@ -1996,7 +1996,7 @@ assert.fail();
 assert.fail();
 ```
 
-## 99
+## 102
 
 ### --description--
 
@@ -2014,7 +2014,7 @@ Within the `common-programming-concepts/` directory, create a new project named 
 assert.fail();
 ```
 
-## 100
+## 103
 
 ### --description--
 
@@ -2046,7 +2046,7 @@ The `loop` expression should print `"again!"`.
 assert.fail();
 ```
 
-## 101
+## 104
 
 ### --description--
 
@@ -2060,7 +2060,7 @@ Run the program to see the output. **Press `Ctrl+C` to stop the program.**
 assert.fail();
 ```
 
-## 102
+## 105
 
 ### --description--
 
@@ -2076,7 +2076,7 @@ The `loop` expression should contain a `break` statement.
 assert.fail();
 ```
 
-## 103
+## 106
 
 ### --description--
 
@@ -2090,7 +2090,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 104
+## 107
 
 ### --description--
 
@@ -2119,7 +2119,7 @@ The `main` function should contain the above code.
 assert.fail();
 ```
 
-## 105
+## 108
 
 ### --description--
 
@@ -2133,7 +2133,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 106
+## 109
 
 ### --description--
 
@@ -2176,7 +2176,7 @@ The `main` function should contain the above code.
 assert.fail();
 ```
 
-## 107
+## 110
 
 ### --description--
 
@@ -2190,7 +2190,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 108
+## 111
 
 ### --description--
 
@@ -2226,7 +2226,7 @@ The `main` function should contain the above code.
 assert.fail();
 ```
 
-## 109
+## 112
 
 ### --description--
 
@@ -2240,7 +2240,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 110
+## 113
 
 ### --description--
 
@@ -2270,7 +2270,7 @@ The `main` function should contain the above code.
 assert.fail();
 ```
 
-## 111
+## 114
 
 ### --description--
 
@@ -2284,7 +2284,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 112
+## 115
 
 ### --description--
 
@@ -2328,7 +2328,7 @@ The `for` loop should print each element of the array.
 assert.fail();
 ```
 
-## 113
+## 116
 
 ### --description--
 
@@ -2342,7 +2342,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 114
+## 117
 
 ### --description--
 
@@ -2392,7 +2392,7 @@ The `for` loop should print each element of the array.
 assert.fail();
 ```
 
-## 115
+## 118
 
 ### --description--
 
@@ -2406,7 +2406,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 116
+## 119
 
 ### --description--
 
@@ -2444,7 +2444,7 @@ The `for` loop should print each element of the array.
 assert.fail();
 ```
 
-## 117
+## 120
 
 ### --description--
 
@@ -2458,7 +2458,7 @@ Run the program to see the output.
 assert.fail();
 ```
 
-## 118
+## 121
 
 ### --description--
 
