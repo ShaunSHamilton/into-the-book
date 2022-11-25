@@ -33,6 +33,10 @@ code .
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ShaunSHamilton/into-the-book)
 
+1. Once finished, open the command palette again, and run `freeCodeCamp: Run Course`.
+
+2. Choose a course, and follow the instructions 🦀
+
 ## Roadmap
 
 <style>
@@ -53,7 +57,7 @@ code .
   <tr>
     <td>Chapter 1</td>
     <td>✅</td>
-    <td>❌</td>
+    <td>✅</td>
  </tr>
   <tr>
     <td><a href="https://github.com/ShaunSHamilton/into-the-book/issues/1">Chapter 2</a></td>
