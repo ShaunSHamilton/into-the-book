@@ -38,10 +38,11 @@
     "dashedName": "understanding-ownership",
     "isIntegrated": false,
     "description": "Learn how to get started",
-    "isPublic": false,
+    "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "seedEveryLesson": true
   },
   {
     "id": 4,
