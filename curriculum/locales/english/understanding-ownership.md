@@ -897,7 +897,15 @@ assert.fail('Tests not implemented');
 
 **Ways Variables and Data Interact: Move**
 
+Within the `main` function, bind the value `5` to a variable named `x`.
+
 ### --tests--
+
+The `main` function should contain `let x = 5;`.
+
+```js
+assert.fail('Tests not implemented');
+```
 
 ### --seed--
 
@@ -908,5 +916,630 @@ fn main() {
 
 }
 ```
+
+## 34
+
+### --description--
+
+Within the `main` function, bind the value `x` to a variable named `y`.
+
+### --tests--
+
+The `main` function should contain `let y = x;`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+
+}
+```
+
+## 35
+
+### --description--
+
+Use a single `println!` expression to print the values of `x` and `y` to the console.
+
+### --tests--
+
+The `main` function should contain `println!("x = {x}, y = {y}");`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+
+}
+```
+
+## 36
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+}
+```
+
+## 37
+
+### --description--
+
+Integers are simple values with a known, fixed size. The values of `x` and `y` are pushed onto the stack.
+
+Now, bind the value `String::from("hello")` to a variable named `s1`.
+
+### --tests--
+
+The `main` function should contain `let s1 = String::from("hello");`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 38
+
+### --description--
+
+Bind the value `s1` to a variable named `s2`.
+
+### --tests--
+
+The `main` function should contain `let s2 = s1;`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    let s1 = String::from("hello");
+
+}
+```
+
+## 39
+
+### --description--
+
+Use a single `println!` expression to print the values of `s1` and `s2` to the console.
+
+### --tests--
+
+The `main` function should contain `println!("s1 = {s1}, s2 = {s2}");`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    let s1 = String::from("hello");
+    let s2 = s1;
+
+}
+```
+
+## 40
+
+### --description--
+
+Build the program.
+
+### --tests--
+
+`cargo build` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    let s1 = String::from("hello");
+    let s2 = s1;
+    println!("s1 = {s1}, s2 = {s2}");
+}
+```
+
+## 41
+
+### --description--
+
+It seems like the code should compile, because the use of `s1` and `s2` looks very similar to the use of `x` and `y`. However, the `borrow of moved value: \`s1\`` error is back.
+
+A `String` is made up of three parts:
+
+- pointer
+  - location of the memory on the heap holding the contents
+- length
+  - how much memory, in bytes, received from the allocator
+- capacity
+  - size of the memory, in bytes, that was allocated
+
+Assigning `s1` to `s2`, the `String` data is copied, meaning the pointer, length, and capacity on the stack are copied. However, the data on the heap that the pointer refers to is not copied. The data representation in meory looks like:
+
+![The Rust Book - Figure 4-2](https://doc.rust-lang.org/book/img/trpl04-02.svg)
+
+Build the code again to re-read the error.
+
+### --tests--
+
+`cargo build` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 42
+
+### --description--
+
+**Ways Variables and Data Interact: Clone**
+
+Rust considers `s1` to no longer be valid, in order to prevent a <dfn title="two data pointers pointing to the same location, going out of scope, and trying to free the same memory twice">double free</dfn> error.
+
+Instead of just performing a <dfn>shallow copy</dfn>, Rust invalidates the first variable, which is known as a <dfn>move</dfn>. `s1` is moved into `s2`. Rust never automatically creates <dfn>deep copies</dfn> of your data. Therefore, any automatic copying can be assumed to be inexpensive in terms of runtime performance.
+
+To get a deep copy of the `String` data, call the `clone` method.
+
+```rust
+let s1 = String::from("hello");
+let s2 = s1.clone();
+```
+
+### --tests--
+
+The `main` function should contain `let s2 = s1.clone();`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 43
+
+### --description--
+
+The `clone` method makes a full copy of all the data on the heap for the variable. This may be expensive, so it is not always the best solution.
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+    println!("s1 = {s1}, s2 = {s2}");
+}
+```
+
+## 44
+
+### --description--
+
+Instead of copying `s1` to `s2`, use the reference operator `&` to create a reference to `s1` and bind it to `s2`.
+
+### --tests--
+
+The `main` function should contain `let s2 = &s1;`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 45
+
+### --description--
+
+Making `s2` a reference to `s1` allows Rust to use the same memory location for both variables, and prevents a double free error, by invalidating the variables in the correct order, when they go out of scope: `s2` first, then `s1`.
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let x = 5;
+    let y = x;
+    println!("x = {x}, y = {y}");
+
+    let s1 = String::from("hello");
+    let s2 = &s1;
+    println!("s1 = {s1}, s2 = {s2}");
+}
+```
+
+## 46
+
+### --description--
+
+**Ownership and Functions**
+
+Going back to functions where the parameters are passed by value, it is clearer when ownership is taken, and when a type is copied.
+
+Define a function `takes_ownership` that takes a `String` as a parameter and prints the value.
+
+### --tests--
+
+A function named `takes_ownership` should be defined.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`takes_ownership` should take a `String` as a parameter.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`takes_ownership` should print the value of the `String` parameter.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+
+    println!("s = {s}");
+
+    let x = 5;
+
+    println!("x = {x}");
+}
+
+
+```
+
+## 47
+
+### --description--
+
+Define a function `makes_copy` that takes an `i32` as a parameter and prints the value.
+
+### --tests--
+
+A function named `makes_copy` should be defined.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`makes_copy` should take an `i32` as a parameter.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`makes_copy` should print the value of the `i32` parameter.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+
+    println!("s = {s}");
+
+    let x = 5;
+
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+
+```
+
+## 48
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+
+    println!("s = {s}");
+
+    let x = 5;
+
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+fn makes_copy(some_integer: i32) {
+    println!("some_integer = {some_integer}");
+}
+```
+
+## 49
+
+### --description--
+
+Immediately after the declaration of `s`, call the `takes_ownership` function with `s` as an argument.
+
+### --tests--
+
+The `main` function should contain `takes_ownership(s);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`takes_ownership(s)` should be called immediately after the declaration of `s`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 50
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    takes_ownership(s);
+    println!("s = {s}");
+
+    let x = 5;
+
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+fn makes_copy(some_integer: i32) {
+    println!("some_integer = {some_integer}");
+}
+```
+
+## 51
+
+### --description--
+
+After the call to `takes_ownership`, `s` is no longer valid, so the program does not compile.
+
+Comment out the line that prints `s`.
+
+### --tests--
+
+The `main` function should contain `// println!("s = {s}");`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 52
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    takes_ownership(s);
+    // println!("s = {s}");
+
+    let x = 5;
+
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+fn makes_copy(some_integer: i32) {
+    println!("some_integer = {some_integer}");
+}
+```
+
+## 53
+
+### --description--
+
+Immediately after the declaration of `x`, call the `makes_copy` function with `x` as an argument.
+
+### --tests--
+
+The `main` function should contain `makes_copy(x);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`makes_copy(x)` should be called immediately after the declaration of `x`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 54
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    takes_ownership(s);
+    // println!("s = {s}");
+
+    let x = 5;
+    makes_copy(x);
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+fn makes_copy(some_integer: i32) {
+    println!("some_integer = {some_integer}");
+}
+```
+
+## 55
+
+### --description--
+
+As the `i32` type implements the `Copy` <dfn>trait</dfn>, it is valid to use `x` after the call to `makes_copy`.
 
 ## --fcc-end--
