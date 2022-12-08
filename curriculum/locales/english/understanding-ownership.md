@@ -1542,4 +1542,103 @@ fn makes_copy(some_integer: i32) {
 
 As the `i32` type implements the `Copy` <dfn>trait</dfn>, it is valid to use `x` after the call to `makes_copy`.
 
+Uncomment the line that prints `s`, and make the program valid by using the `clone` method on the `s` variable.
+
+### --tests--
+
+The `main` function should contain `println!("s = {s}");` uncommented.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`s.clone()` should be passed to `takes_ownership`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 56
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    takes_ownership(s.clone());
+    println!("s = {s}");
+
+    let x = 5;
+    makes_copy(x);
+    println!("x = {x}");
+}
+
+fn takes_ownership(some_string: String) {
+    println!("some_string = {some_string}");
+}
+
+fn makes_copy(some_integer: i32) {
+    println!("some_integer = {some_integer}");
+}
+```
+
+## 57
+
+### --description--
+
+**Return Values and Scope**
+
+Returning values can also transfer ownership. The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
+
+Define a function `gives_ownership` that returns a `String`.
+
+### --tests--
+
+The `main.rs` file should contain a function named `gives_ownership`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `gives_ownership` function should return a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+`String::from("yours")` should be returned from the `gives_ownership` function.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+}
+
+```
+
+## 58
+
+### --description--
+
 ## --fcc-end--
