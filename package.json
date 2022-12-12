@@ -11,5 +11,8 @@
   "type": "module",
   "dependencies": {
     "@freecodecamp/freecodecamp-os": "1.6.5"
+  },
+  "scripts": {
+    "rejig": "node tooling/rejig.js"
   }
 }
