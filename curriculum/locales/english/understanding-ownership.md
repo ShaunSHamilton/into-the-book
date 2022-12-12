@@ -708,7 +708,7 @@ The `drop` call should be moved to the end of the `main` function.
 assert.fail('Tests not implemented');
 ```
 
-## 27
+## 28
 
 ### --description--
 
@@ -747,7 +747,7 @@ fn main() {
 
 ```
 
-## 28
+## 29
 
 ### --description--
 
@@ -788,7 +788,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 29
+## 30
 
 ### --description--
 
@@ -817,7 +817,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 30
+## 31
 
 ### --description--
 
@@ -839,7 +839,7 @@ The `take_ownership` function should be called immediately before the print expr
 assert.fail('Tests not implemented');
 ```
 
-## 31
+## 32
 
 ### --description--
 
@@ -868,7 +868,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 32
+## 33
 
 ### --description--
 
@@ -891,7 +891,7 @@ The `take_ownership` call should be moved to the end of the `main` function.
 assert.fail('Tests not implemented');
 ```
 
-## 33
+## 34
 
 ### --description--
 
@@ -917,7 +917,7 @@ fn main() {
 }
 ```
 
-## 34
+## 35
 
 ### --description--
 
@@ -942,7 +942,7 @@ fn main() {
 }
 ```
 
-## 35
+## 36
 
 ### --description--
 
@@ -968,7 +968,7 @@ fn main() {
 }
 ```
 
-## 36
+## 37
 
 ### --description--
 
@@ -995,7 +995,7 @@ fn main() {
 }
 ```
 
-## 37
+## 38
 
 ### --description--
 
@@ -1011,7 +1011,7 @@ The `main` function should contain `let s1 = String::from("hello");`.
 assert.fail('Tests not implemented');
 ```
 
-## 38
+## 39
 
 ### --description--
 
@@ -1040,7 +1040,7 @@ fn main() {
 }
 ```
 
-## 39
+## 40
 
 ### --description--
 
@@ -1070,7 +1070,7 @@ fn main() {
 }
 ```
 
-## 40
+## 41
 
 ### --description--
 
@@ -1100,7 +1100,7 @@ fn main() {
 }
 ```
 
-## 41
+## 42
 
 ### --description--
 
@@ -1129,7 +1129,7 @@ Build the code again to re-read the error.
 assert.fail('Tests not implemented');
 ```
 
-## 42
+## 43
 
 ### --description--
 
@@ -1154,7 +1154,7 @@ The `main` function should contain `let s2 = s1.clone();`.
 assert.fail('Tests not implemented');
 ```
 
-## 43
+## 44
 
 ### --description--
 
@@ -1186,7 +1186,7 @@ fn main() {
 }
 ```
 
-## 44
+## 45
 
 ### --description--
 
@@ -1200,7 +1200,7 @@ The `main` function should contain `let s2 = &s1;`.
 assert.fail('Tests not implemented');
 ```
 
-## 45
+## 46
 
 ### --description--
 
@@ -1232,7 +1232,7 @@ fn main() {
 }
 ```
 
-## 46
+## 47
 
 ### --description--
 
@@ -1280,7 +1280,7 @@ fn main() {
 
 ```
 
-## 47
+## 48
 
 ### --description--
 
@@ -1328,7 +1328,7 @@ fn takes_ownership(some_string: String) {
 
 ```
 
-## 48
+## 49
 
 ### --description--
 
@@ -1366,7 +1366,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 49
+## 50
 
 ### --description--
 
@@ -1386,7 +1386,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 50
+## 51
 
 ### --description--
 
@@ -1424,7 +1424,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 51
+## 52
 
 ### --description--
 
@@ -1440,7 +1440,7 @@ The `main` function should contain `// println!("s = {s}");`.
 assert.fail('Tests not implemented');
 ```
 
-## 52
+## 53
 
 ### --description--
 
@@ -1478,7 +1478,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 53
+## 54
 
 ### --description--
 
@@ -1498,7 +1498,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 54
+## 55
 
 ### --description--
 
@@ -1536,7 +1536,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 55
+## 56
 
 ### --description--
 
@@ -1558,7 +1558,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 56
+## 57
 
 ### --description--
 
@@ -1596,13 +1596,13 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 57
+## 58
 
 ### --description--
 
 **Return Values and Scope**
 
-Returning values can also transfer ownership. The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless ownership of the data has been moved to another variable.
+Returning values can also transfer ownership. The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop`, unless ownership of the data has been moved to another variable.
 
 Define a function `gives_ownership` that returns a `String`.
 
@@ -1637,7 +1637,259 @@ fn main() {
 
 ```
 
-## 58
+## 59
+
+### --description--
+
+Print the value of `s1` to the console.
+
+### --tests--
+
+`println!("s1 = {s1}");` should be called in the `main` function.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+```
+
+## 60
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+    println!("s1 = {s1}");
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+```
+
+## 61
+
+### --description--
+
+Define a function `takes_and_gives_back` that takes a `String` and returns a `String`. In the body of the function, return the argument.
+
+### --tests--
+
+The `main.rs` file should contain a function named `takes_and_gives_back`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `takes_and_gives_back` function should take a `String` and return a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The argument should be returned from the `takes_and_gives_back` function.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+    println!("s1 = {s1}");
+
+    let s2 = String::from("yours");
+    let s3 = takes_and_gives_back(s2);
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+```
+
+## 62
+
+### --description--
+
+Print the value of `s2` to the console.
+
+### --tests--
+
+`println!("s2 = {s2}");` should be called in the `main` function.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+    println!("s1 = {s1}");
+
+    let s2 = String::from("yours");
+    let s3 = takes_and_gives_back(s2);
+
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+    a_string
+}
+```
+
+## 63
+
+### --description--
+
+Build the program.
+
+### --tests--
+
+`cargo build` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+    println!("s1 = {s1}");
+
+    let s2 = String::from("yours");
+    let s3 = takes_and_gives_back(s2);
+    println!("s2 = {s2}");
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+    a_string
+}
+```
+
+## 64
+
+### --description--
+
+Notice the compiler error mentioning `s2` has been moved.
+
+Fix the error by changing the `println!` expression to use `s3` instead of `s2`.
+
+### --tests--
+
+`println!("s2 = {s2}");` should be changed to `println!("s3 = {s3}");` in the `main` function.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 65
+
+### --description--
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"ownership/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = gives_ownership();
+    println!("s1 = {s1}");
+
+    let s2 = String::from("yours");
+    let s3 = takes_and_gives_back(s2);
+    println!("s3 = {s3}");
+}
+
+fn gives_ownership() -> String {
+    String::from("yours")
+}
+
+fn takes_and_gives_back(a_string: String) -> String {
+    a_string
+}
+```
+
+## 66
+
+### --description--
+
+**References and Borrowing**
+
+Following a coding pattern of returning any value passed in as an argument in order to re-use it is quite annoying. Luckily, Rust has a feature for using a value **without** transferring ownership called <dfn>references</dfn>.
+
+A reference is a like a pointer in that it is an address to access data stored elsewhere. However, unlike a pointer, a reference is guaranteed to point to a valid value of a particular type for the life of that reference.
+
+Within `understanding-ownership/`, create a new project called `references`.
+
+### --tests--
+
+`cargo new references` should be run in the `understanding-ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 67
 
 ### --description--
 
