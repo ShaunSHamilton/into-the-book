@@ -1893,4 +1893,629 @@ assert.fail('Tests not implemented');
 
 ### --description--
 
+Within `references/src/main.rs`, define a function `calculate_length` that takes a `String` and returns a `usize`.
+
+### --tests--
+
+The `main.rs` file should contain a function named `calculate_length`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `calculate_length` function should take a `String` and return a `usize`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+```
+
+## 68
+
+### --description--
+
+Within `calculate_length`, use the `len` method on the `String` type to return the length of the `String` argument.
+
+### --tests--
+
+The `calculate_length` function should return `s.len()`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: String) -> usize {
+
+}
+```
+
+## 69
+
+### --description--
+
+Use the `cargo check` command to compile the program, and check for errors.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: String) -> usize {
+    s.len()
+}
+```
+
+## 70
+
+### --description--
+
+Notice the compiler error mentioning `s1` has been moved.
+
+Instead of moving `s1` into `calculate_length`, provide a <dfn title="A reference is like a pointer in that it is an address to access the data stored at that address. Unlike a pointer, a reference is guarenteed to point to a valid value for the life of the reference.">reference</dfn> to the `String` value:
+
+```rust
+let my_string = String::from("hello");
+my_function(&my_string); // my_string is passed by reference - not moved
+```
+
+### --tests--
+
+The call to `calculate_length` should pass `&s1` instead of `s1`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 71
+
+### --description--
+
+Check the program again.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: String) -> usize {
+    s.len()
+}
+```
+
+## 72
+
+### --description--
+
+Notice the compiler error about the mismatched types `String` vs `&String`.
+
+Change the function signature to take a reference to a `String` instead of a `String`:
+
+```rust
+fn my_function(s: &String) {
+    // ...
+}
+```
+
+### --tests--
+
+The `calculate_length` function should take a reference to a `String` instead of a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 73
+
+### --description--
+
+Check the program again.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+
+## 74
+
+### --description--
+
+Run the program to see the output.
+
+**Note:** The opposite of referencing by using `&` is <dfn title="">dereferencing</dfn>, which is accomplished with the dereference operator, `*`.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 75
+
+### --description--
+
+Within `references/src/main.rs`, define a function `change` that takes a reference to a `String`.
+
+### --tests--
+
+The `main.rs` file should contain a function named `change`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `change` function should take a reference to a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    change(&s);
+    println!("s is {}", s);
+}
+
+```
+
+## 76
+
+### --description--
+
+Within `change`, use the `push_str` method to add the string `" world"` to the `some_string` argument.
+
+### --tests--
+
+The `change` function should use `some_string.push_str(", world")`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    change(&s);
+    println!("s is {}", s);
+}
+
+fn change(some_string: &String) {
+
+}
+```
+
+## 77
+
+### --description--
+
+Check the program.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let s = String::from("hello");
+    change(&s);
+    println!("s is {}", s);
+}
+
+fn change(some_string: &String) {
+    some_string.push_str(", world");
+}
+```
+
+## 78
+
+### --description--
+
+Notice the compiler error saying _"cannot borrow `*some_string` as mutable"_.
+
+Just as variables are immutable by default, so are references. To make a reference mutable, use the `mut` keyword:
+
+```rust
+let mut my_string = String::from("hello"); // my_string is declared as mutable
+my_function(&mut my_string); // my_string is passed by mutable reference
+
+fn my_function(string_arg: &mut String) {} // string_arg is typed to be a mutable reference
+```
+
+Change `s` to be mutable, pass it as a mutable reference to `change`, and alter `change` to take a mutable reference to a `String`.
+
+### --tests--
+
+The `main` function should declare `s` as mutable.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `main` function should pass `&mut s` to `change`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `change` function should take a mutable reference to a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 79
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello");
+    change(&mut s);
+    println!("s is {}", s);
+}
+
+fn change(some_string: &String) {
+    some_string.push_str(", world");
+}
+```
+
+## 80
+
+### --description--
+
+Mutable references have one big restriction: there may only be one mutable reference to a value.
+
+Check the program to see the error.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello");
+    let r1 = &mut s;
+    let r2 = &mut s;
+    println!("{}, {}", r1, r2);
+}
+```
+
+## 81
+
+### --description--
+
+The error says `s` cannot be borrowed as mutable more than once at a time. This restriction allows for mutation but in a very controlled fashion. The benefit of having this restriction is that Rust can prevent <dfn title="When two or more pointers access the same data at the same time, and at least one of the pointers is used to write to the data.">data races</dfn> at compile time.
+
+This also prevents one immutable and one mutable reference to the same data. This is because the immutable reference could be used while the mutable reference is being used, which would cause data to be changed unexpectedly.
+
+Check the program to see the error.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello");
+    let r1 = &s;
+    let r2 = &s;
+    let r3 = &mut s;
+    println!("{}, {}, and {}", r1, r2, r3);
+}
+```
+
+## 82
+
+### --description--
+
+Remember, multiple immutable references are allowed, but only one mutable reference is allowed. Fix the code by changing `r3` to be an immutable reference.
+
+### --tests--
+
+The `main` function should declare `r3` as an immutable reference.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 83
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello");
+    let r1 = &s;
+    let r2 = &s;
+    let r3 = &s;
+    println!("{}, {}, and {}", r1, r2, r3);
+}
+```
+
+## 84
+
+### --description--
+
+**Dangling References**
+
+In Rust, the compiler guarantees that references will never be <dfn title="">dangling references</dfn>; data will not go out of scope before the reference to the data does.
+
+Define a function named `dangle` that returns a reference to a `String`.
+
+### --tests--
+
+The `dangle` function should return a reference to a `String`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+```
+
+## 85
+
+### --description--
+
+Within `dangle`, define a variable named `s` that is a new `String` with the value `"hello"`.
+
+### --tests--
+
+The `dangle` function should declare `let s = String::from("hello");`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 86
+
+### --description--
+
+Return a reference to `s` from `dangle`.
+
+### --tests--
+
+The `dangle` function should return `&s`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> &String {
+    let s = String::from("hello");
+
+}
+```
+
+## 87
+
+### --description--
+
+Check the program to see the error.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> &String { // returns a reference to a String
+    let s = String::from("hello"); // s is a new String
+    &s // a reference to the String, s, is returned
+} // s goes out of scope, and is dropped. Its memory goes away.
+```
+
+## 88
+
+### --description--
+
+The error mentions a concept in Rust called <dfn title="">lifetimes</dfn>. These will be covered in detail later, but for now, it is important to know that the Rust compiler is trying to prevent dangling references.
+
+The problem is that `s` is created inside `dangle`, and when `dangle` finishes, `s` will be deallocated. Returning a reference to `s` would be a dangling reference, because the value it refers to would go out of scope.
+
+Fix this by returning the `String` directly rather than a reference to the `String`.
+
+### --tests--
+
+The `dangle` function should return `s` instead of `&s`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 89
+
+### --description--
+
+Check the program to ensure there are no longer errors.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/references/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"references/src/main.rs"--
+
+```rust
+fn main() {
+    let reference_to_nothing = dangle();
+}
+
+fn dangle() -> String {
+    let s = String::from("hello");
+    &s
+}
+```
+
+## 90
+
+### --description--
+
+**The Slice Type**
+
 ## --fcc-end--
