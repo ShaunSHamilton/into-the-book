@@ -37,11 +37,12 @@
     "title": "4. Understanding Ownership",
     "dashedName": "understanding-ownership",
     "isIntegrated": false,
-    "description": "Learn how to get started",
-    "isPublic": false,
+    "description": "Learn about ownership as well as several related features: borrowing, slices, and how Rust lays data out in memory.",
+    "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "seedEveryLesson": true
   },
   {
     "id": 4,
