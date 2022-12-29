@@ -10,7 +10,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@freecodecamp/freecodecamp-os": "1.6.5"
+    "@freecodecamp/freecodecamp-os": "1.6.9"
   },
   "scripts": {
     "rejig": "node tooling/rejig.js"
