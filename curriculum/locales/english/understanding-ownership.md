@@ -2508,7 +2508,7 @@ fn main() {
 
 fn dangle() -> String {
     let s = String::from("hello");
-    &s
+    s
 }
 ```
 
@@ -2517,5 +2517,72 @@ fn dangle() -> String {
 ### --description--
 
 **The Slice Type**
+
+A <dfn title="A kind of reference - it is not owned">slice</dfn> allows you to reference a contiguous sequence of elements in a collection rather than the whole collection.
+
+Within `understanding-ownership/`, create a new project called `slices`.
+
+### --tests--
+
+`cargo new slices` should be run in the `understanding-ownership/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 91
+
+### --description--
+
+Try this small programming challenge by yourself:
+
+Write a function that takes a string of words separated by spaces and returns the first word it finds in that string. If the function does not find a space in the string - the whole string must be one word - the entire string should be returned.
+
+Once you are done, type `done` to continue.
+
+### --tests--
+
+Type `done` in the terminal to continue.
+
+```js
+const lastCommand = await __helpers.getLastCommand();
+assert.include(lastCommand, 'done');
+```
+
+### --seed--
+
+#### --cmd--
+
+```bash
+cargo new slices
+```
+
+## 92
+
+### --description--
+
+### --tests--
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
+}
+```
 
 ## --fcc-end--
