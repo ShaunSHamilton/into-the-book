@@ -2561,7 +2561,17 @@ cargo new slices
 
 ### --description--
 
+The boilerplate provides a basic implementation of the function, but it returns just the index of the first space. This could work, but is not exactly what is desired.
+
+Within the `main` function, declare a mutable variable named `s`, and assign a string consisting of at least two words to it.
+
 ### --tests--
+
+The `main` function should declare `let mut s = String::from("hello world");`.
+
+```js
+assert.fail('Tests not implemented');
+```
 
 ### --seed--
 
@@ -2569,20 +2579,891 @@ cargo new slices
 
 ```rust
 fn main() {
-    println!("Hello, world!");
+
 }
 
 fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
     let bytes = s.as_bytes();
 
+    // Iterate over the array of bytes
     for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
         if item == b' ' {
             return i;
         }
     }
 
+    // If there is no space, the whole string is one word
     s.len()
 }
+```
+
+## 93
+
+### --description--
+
+Within the `main` function, call the `first_word` function with the `s` variable as an argument, assigning the return value to a variable named `word`.
+
+### --tests--
+
+The `main` function should have `let word = first_word(&s);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 94
+
+### --description--
+
+Within the `main` function, call the `clear` method on the `s` variable to clear the string.
+
+### --tests--
+
+The `main` function should have `s.clear();`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 95
+
+### --description--
+
+Check the program to ensure there are no errors.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+    s.clear();
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 96
+
+### --description--
+
+Now the problem might be clearer: the `word` variable indicates the index of the first word in the string, but the `s` variable is empty. So, using it to get the first word will not work.
+
+Within the `main` function, print the character of `s` at the `word` index.
+
+### --tests--
+
+The `main` function should have `println!("The first word is: {}", s[word]);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+    s.clear();
+
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 97
+
+### --description--
+
+Run the program to see the error.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+    s.clear();
+    println!("The first word is: {}", s[word]);
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 98
+
+### --description--
+
+**String Slices**
+
+A _string slice_ is a reference to part of a `String`, and it looks like this:
+
+```rust
+let string = String::from("the quick brown fox");
+let quick = &string[4..9];
+```
+
+The type of `string` is `String`, which is a growable, mutable, owned, UTF-8 encoded string type. The type of `quick` is `&str`, which is a string slice.
+
+Within the `main` function, declare a `hello` variable with the value of the first 5 characters of the `s` variable, using a string slice.
+
+### --tests--
+
+The `main` function should have `let hello = &s[0..5];`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 99
+
+### --description--
+
+Within the `main` function, declare a `world` variable with the value of the last 5 characters of the `s` variable, using a string slice.
+
+### --tests--
+
+The `main` function should have `let world = &s[6..11];`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let hello = &s[0..5];
+
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 100
+
+### --description--
+
+The `..` range syntax can leave out the start index - defaulting to `0`.
+
+Drop the `0` from the range of the `hello` variable value.
+
+### --tests--
+
+The `main` function should have `let hello = &s[..5];`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let hello = &s[0..5];
+    let world = &s[6..11];
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 101
+
+### --description--
+
+The `..` range syntax can leave out the end index - defaulting to the length of the string.
+
+Drop the `11` from the range of the `world` variable value.
+
+### --tests--
+
+The `main` function should have `let world = &s[6..];`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let hello = &s[..5];
+    let world = &s[6..11];
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 102
+
+### --description--
+
+Rewrite the `first_word` function to return a string slice (`&str`) instead of a `usize` value.
+
+### --tests--
+
+The `first_word` function should have the signature `fn first_word(s: &String) -> &str`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let hello = &s[..5];
+    let world = &s[6..];
+}
+
+fn first_word(s: &String) -> usize {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 103
+
+### --description--
+
+Instead of returning the index of the space, return the string slice of the first word.
+
+### --tests--
+
+The `first_word` function should have `return &s[0..i]`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `first_word` function should end with `&s[..]`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let hello = &s[..5];
+    let world = &s[6..];
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    s.len()
+}
+```
+
+## 104
+
+### --description--
+
+The `first_word` function is now returning a string slice that references a `String` value.
+
+Within the `main` function, declare a variable `word` assigning the value of calling `first_word` with the `s` variable as an argument.
+
+### --tests--
+
+The `main` function should have `let word = first_word(&s);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 105
+
+### --description--
+
+Within the `main` function, print the value of `word`.
+
+### --tests--
+
+The `main` function should have `println!("the first word is: {}", word);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 106
+
+### --description--
+
+Run the program to see the output.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+    println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 107
+
+### --description--
+
+Once again, before the `println!` statement, clear the `s` variable.
+
+### --tests--
+
+The `main` function should have `s.clear();`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+    println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 108
+
+### --description--
+
+Check the program to see the error.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+    s.clear();
+
+    println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 109
+
+### --description--
+
+The error is because the `s` variable is cleared, and the `word` variable is referencing the `s` variable.
+
+If there is an immutable reference to something, it cannot be taken as a mutable reference. The `println!` after the call to `clear` uses the reference in` word`, so the immutable reference must still be active at that point. Rust disallows the mutable reference in `clear` and the immutable reference in `word` from existing at the same time, and compilation fails.
+
+Fix the error, by removing the call to `clear`.
+
+### --tests--
+
+The `main` function should not have `s.clear();`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 110
+
+### --description--
+
+Instead of declaring `s` to be a `String`, declare it to be a `&str` type:
+
+```rust
+let my_str = "example string slice";
+```
+
+`my_str` is a _string literal_. **Note:** String literals are immutable.
+
+### --tests--
+
+The `main` function should have `let s = "hello world";`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let mut s = String::from("hello world");
+    let word = first_word(&s);
+
+    println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 111
+
+### --description--
+
+Check the program to see the error.
+
+### --tests--
+
+`cargo check` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+### --seed--
+
+#### --"slices/src/main.rs"--
+
+```rust
+fn main() {
+    let s = "hello world";
+    let word = first_word(&s);
+
+    println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    // Convert the string to an array of bytes
+    let bytes = s.as_bytes();
+
+    // Iterate over the array of bytes
+    for (i, &item) in bytes.iter().enumerate() {
+        // If the byte is a space, return the index
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    // If there is no space, the whole string is one word
+    &s[..]
+}
+```
+
+## 112
+
+### --description--
+
+The error is because the `first_word` function is expecting a `&String` type, but we are passing in a reference to an `&str` type.
+
+Change the `first_word` function to accept a `&str` type, and the call to pass by value.
+
+### --tests--
+
+The `main` function should have `let word = first_word(s);`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+The `first_word` function should have a signature of `fn first_word(s: &str) -> &str`.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 113
+
+### --description--
+
+The `first_word` function now accepts a `&str` type, and the call to `first_word` passes by value.
+
+Run the program.
+
+### --tests--
+
+`cargo run` should be run in the `understanding-ownership/slices/` directory.
+
+```js
+assert.fail('Tests not implemented');
+```
+
+## 114
+
+### --description--
+
+**Summary**
+
+The concepts of ownership, borrowing, and slices ensure memory safety in Rust programs at compile time. The Rust language gives you control over your memory usage in the same way as other systems programming languages, but having the owner of data automatically clean up that data when the owner goes out of scope means you do not have to write and debug extra code to get this control.
+
+Ownership affects how lots of other parts of Rust work, so we will talk about these concepts further throughout the rest of the book. Let us move on to Chapter 5 and look at grouping pieces of data together in a `struct`.
+
+### --tests--
+
+🦀 🚀
+
+```js
+assert.fail('Chapter 4 complete!');
 ```
 
 ## --fcc-end--
