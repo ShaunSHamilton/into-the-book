@@ -1,7 +1,7 @@
 {
   "name": "into-the-book",
   "author": "Shaun Hamilton",
-  "version": "1.6.5",
+  "version": "0.4.1",
   "private": "true",
   "description": "An interactive, deep-dive into the Rust Book",
   "repository": {
@@ -10,7 +10,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@freecodecamp/freecodecamp-os": "1.6.9"
+    "@freecodecamp/freecodecamp-os": "1.8.3"
   },
   "scripts": {
     "rejig": "node tooling/rejig.js"

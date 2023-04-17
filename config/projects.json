@@ -41,7 +41,7 @@
     "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false,
+    "isResetEnabled": true,
     "seedEveryLesson": true
   },
   {

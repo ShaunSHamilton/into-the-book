@@ -11,8 +11,8 @@ import {
   getProjectConfig,
   getConfig,
   getState
-} from '../.freeCodeCamp/tooling/env.js';
-import __helpers from '../.freeCodeCamp/tooling/test-utils.js';
+} from '@freecodecamp-os/freecodecamp/.freeCodeCamp/tooling/env.js';
+import __helpers from '@freecodecamp-os/freecodecamp/.freeCodeCamp/tooling/test-utils.js';
 import { Logger } from 'logover';
 import { readdir, readFile } from 'fs/promises';
 import { join } from 'path';
@@ -44,13 +44,21 @@ async function main() {
       e.match('freecodecamp-courses')
     );
 
-    const { stdout } = await __helpers.getCommandOutput('git log -1');
+    const { stdout } = await __helpers.getCommandOutput('git log -1 --oneline');
+
+    const osInfo = `
+    Architecture: ${os.arch()}
+    Platform: ${os.platform()}
+    Release: ${os.release()}
+    Type: ${os.type()}
+    `;
 
     logover.info('Project: ', currentProject);
     logover.info('Lesson Number: ', currentLesson);
     logover.info('Curriculum Version: ', version);
     logover.info('freeCodeCamp - Courses: ', coursesVersion);
     logover.info('Commit: ', stdout);
+    logover.info('OS Info:', osInfo);
 
     for (const arg of FLAGS) {
       await handleFlag[arg]?.();
@@ -76,7 +84,14 @@ async function main() {
 
 main();
 
-const IGNORE = ['node_modules', 'target'];
+const IGNORE = [
+  'node_modules',
+  'target',
+  'test-ledger',
+  'store',
+  '.cargo',
+  '.DS_Store'
+];
 async function recurseDirectory(path, depth) {
   logover.info(`|${' '.repeat(depth * 2)}|-- ${path}`);
   depth++;
