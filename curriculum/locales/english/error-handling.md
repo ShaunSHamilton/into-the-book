@@ -1,4 +1,4 @@
-# Title
+# Rust - Error Handling
 
 ## 1
 

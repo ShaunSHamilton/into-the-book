@@ -1,4 +1,4 @@
-# Title
+# Rust - Functional Language Features: Iterators and Closures
 
 ## 1
 

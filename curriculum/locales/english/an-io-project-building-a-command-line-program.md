@@ -1,4 +1,4 @@
-# Title
+# Rust - An IO Project Building a Command Line Program
 
 ## 1
 

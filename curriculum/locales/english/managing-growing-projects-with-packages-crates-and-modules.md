@@ -1,4 +1,4 @@
-# Title
+# Rust - Managing Growing Projects with Packages, Crates, and Modules
 
 ## 1
 

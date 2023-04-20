@@ -2,7 +2,6 @@
   "files.exclude": {
     ".devcontainer": false,
     ".editorconfig": false,
-    ".freeCodeCamp": false,
     ".github": false,
     ".gitignore": false,
     ".gitpod.Dockerfile": false,
@@ -54,6 +53,7 @@
       "args": ["--init-file", "./bash/sourcerer.sh"]
     }
   },
+  "terminal.integrated.defaultProfile.linux": "bash",
   "rust-analyzer.linkedProjects": [
     "programming-a-guessing-game/_answer/guessing_game/Cargo.toml"
   ]

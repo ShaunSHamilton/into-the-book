@@ -1,4 +1,4 @@
-# Title
+# Rust - Generic Types, Traits, and Lifetimes
 
 ## 1
 

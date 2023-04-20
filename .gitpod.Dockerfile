@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full:2022-11-15-17-00-18
+FROM gitpod/workspace-full:2023-04-14-07-10-23
 
 RUN bash -c 'VERSION="18" \
     && source $HOME/.nvm/nvm.sh && nvm install $VERSION \
