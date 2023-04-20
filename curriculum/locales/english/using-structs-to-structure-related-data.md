@@ -1,4 +1,4 @@
-# Title
+# Rust - Using Structs to Structure Related Data
 
 ## 1
 

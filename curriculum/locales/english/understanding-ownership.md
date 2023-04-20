@@ -12,14 +12,14 @@
 - There can only be one owner at a time
 - When the owner goes out of scope, the value will be dropped
 
-To begin, open a new terminal, and change into the `undertanding-ownership/` directory:
+To begin, open a new terminal, and change into the `understanding-ownership/` directory:
 
 ### --tests--
 
 The active terminal should be in the `understanding-ownership/` directory.
 
 ```js
-assert.fail();
+assert.fail('Tests not implemented');
 ```
 
 ## 2

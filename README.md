@@ -1,10 +1,10 @@
 # Into the Book
 
-An interactice curriculum based on [The Rust Book](https://doc.rust-lang.org/book/).
+An interactive curriculum based on [The Rust Book](https://doc.rust-lang.org/book/).
 
 ![Into the Book](./client/into-the-book.png)
 
-![interactivity](./client/into-the-book-2.png)
+![Interactivity](./client/into-the-book-2.png)
 
 ## Getting Started
 

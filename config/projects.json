@@ -8,7 +8,8 @@
     "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 23
   },
   {
     "id": 1,
@@ -19,7 +20,8 @@
     "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 42
   },
   {
     "id": 2,
@@ -30,7 +32,8 @@
     "isPublic": true,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 121
   },
   {
     "id": 3,
@@ -42,7 +45,8 @@
     "currentLesson": 1,
     "runTestsOnWatch": true,
     "isResetEnabled": true,
-    "seedEveryLesson": true
+    "seedEveryLesson": true,
+    "numberOfLessons": 114
   },
   {
     "id": 4,
@@ -53,7 +57,9 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "seedEveryLesson": true,
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 5,
@@ -64,7 +70,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 6,
@@ -75,7 +82,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 7,
@@ -86,7 +94,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 8,
@@ -97,7 +106,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 9,
@@ -108,7 +118,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 10,
@@ -119,7 +130,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 11,
@@ -130,7 +142,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 12,
@@ -141,7 +154,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 13,
@@ -152,7 +166,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 14,
@@ -163,7 +178,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 15,
@@ -174,7 +190,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 16,
@@ -185,7 +202,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 17,
@@ -196,7 +214,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 18,
@@ -207,7 +226,8 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   },
   {
     "id": 19,
@@ -218,6 +238,7 @@
     "isPublic": false,
     "currentLesson": 1,
     "runTestsOnWatch": true,
-    "isResetEnabled": false
+    "isResetEnabled": false,
+    "numberOfLessons": 1
   }
 ]
