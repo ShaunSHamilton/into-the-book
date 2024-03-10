@@ -1,6 +1,12 @@
-# Rust - Error Handling
+# Error Handling
 
-## 1
+```json
+{
+  "tags": ["Coming Soon"]
+}
+```
+
+## 0
 
 ### --description--
 

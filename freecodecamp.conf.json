@@ -1,42 +1,17 @@
 {
-  "path": ".",
-  "version": "0.4.1",
-  "scripts": {
-    "develop-course": "NODE_ENV=development node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js",
-    "run-course": "NODE_ENV=production node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js",
-    "test": {
-      "functionName": "handleMessage",
-      "arguments": [
-        {
-          "message": "Hello World!",
-          "type": "info"
-        }
-      ]
-    }
-  },
-  "workspace": {
-    "previews": [
-      {
-        "open": true,
-        "url": "http://localhost:8080",
-        "showLoader": true,
-        "timeout": 4000
-      }
-    ]
-  },
-  "bash": {
-    ".bashrc": "./bash/.bashrc",
-    "sourcerer.sh": "./bash/sourcerer.sh"
-  },
+  "version": "0.5.0",
+  "port": 8080,
   "client": {
     "assets": {
       "header": "./client/assets/fcc_primary_large.svg",
       "favicon": "./client/assets/fcc_primary_small.svg"
     },
     "landing": {
-      "description": "Learn Rust, by diving interactively into The Rust Book",
-      "faq-link": "https://github.com/ShaunSHamilton/into-the-book",
-      "faq-text": "https://github.com/ShaunSHamilton/into-the-book"
+      "english": {
+        "description": "Learn Rust, by diving interactively into The Rust Book",
+        "faq-link": "https://github.com/ShaunSHamilton/into-the-book",
+        "faq-text": "https://github.com/ShaunSHamilton/into-the-book"
+      }
     }
   },
   "config": {
@@ -54,7 +29,8 @@
       "config/",
       "/node_modules/",
       ".git",
-      "/target/"
+      "/target/",
+      ".vscode"
     ]
   },
   "tooling": {

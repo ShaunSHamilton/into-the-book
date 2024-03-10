@@ -46,6 +46,18 @@
     "advanced-features": false,
     "final-project-building-a-multithreaded-web-server": false
   },
+  "freecodecamp-courses.autoStart": true,
+  "freecodecamp-courses.prepare": "sed -i \"s#WD=.*#WD=$(pwd)#g\" ./bash/.bashrc",
+  "freecodecamp-courses.scripts.develop-course": "NODE_ENV=development npm run start",
+  "freecodecamp-courses.scripts.run-course": "NODE_ENV=production npm run start",
+  "freecodecamp-courses.workspace.previews": [
+    {
+      "open": true,
+      "showLoader": true,
+      "timeout": 4000,
+      "url": "http://localhost:8080"
+    }
+  ],
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "bash",

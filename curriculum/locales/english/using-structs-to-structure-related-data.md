@@ -1,6 +1,12 @@
-# Rust - Using Structs to Structure Related Data
+# Using Structs to Structure Related Data
 
-## 1
+```json
+{
+  "tags": ["Coming Soon"]
+}
+```
+
+## 0
 
 ### --description--
 

@@ -1,6 +1,8 @@
-# Rust - Programming a Guessing Game
+# Programming a Guessing Game
 
-## 1
+Learn about common programming concepts by writing a simple guessing game.
+
+## 0
 
 ### --description--
 
@@ -14,7 +16,7 @@ The terminal working directory should be `program-a-guessing-game/`
 assert.fail();
 ```
 
-## 2
+## 1
 
 ### --description--
 
@@ -32,7 +34,7 @@ Cargo should be used to create a new project named `guessing_game`
 assert.fail();
 ```
 
-## 3
+## 2
 
 ### --description--
 
@@ -46,7 +48,7 @@ The terminal working directory should be `guessing_game/`
 assert.fail();
 ```
 
-## 4
+## 3
 
 ### --description--
 
@@ -60,7 +62,7 @@ Use `cargo` to compile and run the program in the same step.
 assert.fail();
 ```
 
-## 5
+## 4
 
 ### --description--
 
@@ -86,7 +88,7 @@ The `src/main.rs` file should contain `use std::io;`.
 assert.fail();
 ```
 
-## 6
+## 5
 
 ### --description--
 
@@ -117,7 +119,7 @@ The `main` function should **not** contain the `Hello, world!` expression.
 assert.fail();
 ```
 
-## 7
+## 6
 
 ### --description--
 
@@ -131,7 +133,7 @@ Use `cargo` to compile and run the program in the same step.
 assert.fail();
 ```
 
-## 8
+## 7
 
 ### --description--
 
@@ -181,7 +183,7 @@ The `guess` variable should be assigned the value of `String::new()`.
 assert.fail();
 ```
 
-## 9
+## 8
 
 ### --description--
 
@@ -219,7 +221,7 @@ The `stdin_handle` variable should be assigned the value of `io::stdin()`.
 assert.fail();
 ```
 
-## 10
+## 9
 
 ### --description--
 
@@ -249,7 +251,7 @@ The `read_line` method should be called with `&mut guess` as an argument.
 assert.fail();
 ```
 
-## 11
+## 10
 
 ### --description--
 
@@ -267,7 +269,7 @@ Run `cargo build` to see what the compiler says about not doing anything with th
 assert.fail();
 ```
 
-## 12
+## 11
 
 ### --description--
 
@@ -293,7 +295,7 @@ The `expect` method should be called with `"Failed to read line"` as an argument
 assert.fail();
 ```
 
-## 13
+## 12
 
 ### --description--
 
@@ -307,7 +309,7 @@ Re-build the program with `cargo build` to confirm the program now successfully 
 assert.fail();
 ```
 
-## 14
+## 13
 
 ### --description--
 
@@ -321,7 +323,7 @@ Run the program, and enter a value in the terminal as prompted, then hit the `En
 assert.fail();
 ```
 
-## 15
+## 14
 
 ### --description--
 
@@ -355,7 +357,7 @@ The `println!` expression should be called after the `read_line` call.
 assert.fail();
 ```
 
-## 16
+## 15
 
 ### --description--
 
@@ -369,7 +371,7 @@ Run the program again, and enter a value in the terminal as prompted, then hit t
 assert.fail();
 ```
 
-## 17
+## 16
 
 ### --description--
 
@@ -392,7 +394,7 @@ The `rand` crate should be added as a dependency to the `Cargo.toml` file.
 assert.fail();
 ```
 
-## 18
+## 17
 
 ### --description--
 
@@ -406,7 +408,7 @@ Build the project, to fetch the latest versions of everything dependencies need 
 assert.fail();
 ```
 
-## 19
+## 18
 
 Cargo knows the `rand` crate has already been downloaded and compiled its dependencies, so it will not download it again. Instead, it will use the cached version.
 
@@ -420,7 +422,7 @@ Re-build the project, and notice the output is much faster than the first time.
 assert.fail();
 ```
 
-## 20
+## 19
 
 ### --description--
 
@@ -438,7 +440,7 @@ Run `cargo update`.
 assert.fail();
 ```
 
-## 21
+## 20
 
 ### --description--
 
@@ -456,7 +458,7 @@ The `use` keyword should be used to bring the `rand` crate into scope.
 assert.fail();
 ```
 
-## 22
+## 21
 
 ### --description--
 
@@ -484,7 +486,7 @@ assert.fail();
 assert.fail();
 ```
 
-## 23
+## 22
 
 ### --description--
 
@@ -512,7 +514,7 @@ The `gen_range` method should be called with `1..=100` as an argument.
 assert.fail();
 ```
 
-## 24
+## 23
 
 ### --description--
 
@@ -526,7 +528,7 @@ Build the project, and read the error message.
 assert.fail();
 ```
 
-## 25
+## 24
 
 ### --description--
 
@@ -542,7 +544,7 @@ The `Rng` trait should be brought into scope with `use rand::Rng;`.
 assert.fail();
 ```
 
-## 26
+## 25
 
 ### --description--
 
@@ -556,7 +558,7 @@ Re-build the project to confirm the project successfully compiles.
 assert.fail();
 ```
 
-## 27
+## 26
 
 ### --description--
 
@@ -582,7 +584,7 @@ The `println!` expression should be added directly below the `secret_number` dec
 assert.fail();
 ```
 
-## 28
+## 27
 
 ### --description--
 
@@ -596,7 +598,7 @@ Run the program to see the secret number printed to the terminal. Remember to en
 assert.fail();
 ```
 
-## 29
+## 28
 
 ### --description--
 
@@ -610,7 +612,7 @@ The `Ordering` enum should be brought into scope with `use std::cmp::Ordering;`.
 assert.fail();
 ```
 
-## 30
+## 29
 
 ### --description--
 
@@ -644,7 +646,7 @@ The `match` should be used directly below the `println!` statement that prints `
 assert.fail();
 ```
 
-## 31
+## 30
 
 ### --description--
 
@@ -658,7 +660,7 @@ Build the program to see the error message.
 assert.fail();
 ```
 
-## 32
+## 31
 
 ### --description--
 
@@ -684,7 +686,7 @@ The shadowed `guess` variable should be declared directly above the `println!` s
 assert.fail();
 ```
 
-## 33
+## 32
 
 ### --description--
 
@@ -725,7 +727,7 @@ A type annotation of `u32` should be added to the `guess` declaration.
 assert.fail();
 ```
 
-## 34
+## 33
 
 ### --description--
 
@@ -739,7 +741,7 @@ Run the program, and enter a number.
 assert.fail();
 ```
 
-## 35
+## 34
 
 ### --description--
 
@@ -795,7 +797,7 @@ The `loop` should be closed at the end of the `main` function.
 assert.fail();
 ```
 
-## 36
+## 35
 
 ### --description--
 
@@ -819,7 +821,7 @@ The program should crash when entering a non-number.
 assert.fail();
 ```
 
-## 37
+## 36
 
 ### --description--
 
@@ -850,7 +852,7 @@ The `break` statement should be added directly below the `println!` statement th
 assert.fail();
 ```
 
-## 38
+## 37
 
 ### --description--
 
@@ -864,7 +866,7 @@ Run the program, and win the game.
 assert.fail();
 ```
 
-## 39
+## 38
 
 ### --description--
 
@@ -889,7 +891,7 @@ The `expect` call should be replaced with a `match` expression.
 assert.fail();
 ```
 
-## 40
+## 39
 
 ### --description--
 
@@ -903,7 +905,7 @@ Run the program, and try different inputs.
 assert.fail();
 ```
 
-## 41
+## 40
 
 ### --description--
 
@@ -917,7 +919,7 @@ The `println!` statement that prints `secret_number` should be removed.
 assert.fail();
 ```
 
-## 42
+## 41
 
 ### --description--
 

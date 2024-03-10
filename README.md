@@ -2,6 +2,8 @@
 
 An interactive curriculum based on [The Rust Book](https://doc.rust-lang.org/book/).
 
+The content in the above book has been modified to be interactive and more engaging. The content is broken down into smaller, more manageable chunks, and each section has tests to ensure the reader understands the content.
+
 ![Into the Book](./client/into-the-book.png)
 
 ![Interactivity](./client/into-the-book-2.png)
@@ -33,9 +35,7 @@ code .
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ShaunSHamilton/into-the-book)
 
-1. Once finished, open the command palette again, and run `freeCodeCamp: Run Course`.
-
-2. Choose a course, and follow the instructions 🦀
+Once finished choose a course, and follow the instructions 🦀
 
 ## Roadmap
 

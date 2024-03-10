@@ -1,6 +1,8 @@
-# Rust - Getting Started
+# Getting Started
 
-## 1
+Install Rust, write a "Hello, world!" program, and use Cargo.
+
+## 0
 
 ### --description--
 
@@ -26,7 +28,7 @@ assert.equal(
 );
 ```
 
-## 2
+## 1
 
 ### --description--
 
@@ -45,7 +47,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'rustc --version');
 ```
 
-## 3
+## 2
 
 ### --description--
 
@@ -66,7 +68,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'rustc --help');
 ```
 
-## 4
+## 3
 
 ### --description--
 
@@ -85,7 +87,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'rustup update');
 ```
 
-## 5
+## 4
 
 ### --description--
 
@@ -107,7 +109,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'getting-started');
 ```
 
-## 6
+## 5
 
 ### --description--
 
@@ -118,11 +120,13 @@ Create a new file called `hello.rs`.
 The `getting-started/hello.rs` file should exist.
 
 ```js
-const pathExists = __helpers.fileExists('getting-started/hello.rs');
+const pathExists = await __helpers.fileExists(
+  join(project.dashedName, 'hello.rs')
+);
 assert.isTrue(pathExists);
 ```
 
-## 7
+## 6
 
 ### --description--
 
@@ -139,13 +143,13 @@ fn main() {
 The `getting-started/hello.rs` file should contain the above code:
 
 ```js
-const fileContents = await __helpers.getFile('getting-started/hello.rs');
+const fileContents = await __helpers.getFile(project.dashedName, 'hello.rs');
 assert.include(fileContents, 'fn main() {');
 assert.include(fileContents, 'println!("Hello, world!");');
 assert.include(fileContents, '}');
 ```
 
-## 8
+## 7
 
 ### --description--
 
@@ -164,7 +168,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'rustc hello.rs');
 ```
 
-## 9
+## 8
 
 ### --description--
 
@@ -185,7 +189,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), './hello');
 ```
 
-## 10
+## 9
 
 ### --description--
 
@@ -206,7 +210,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo --version');
 ```
 
-## 11
+## 10
 
 ### --description--
 
@@ -217,18 +221,22 @@ Remove the `hello` and `hello.rs` files from the `getting-started` directory.
 The `getting-started/hello` file should not exist.
 
 ```js
-const pathExists = __helpers.fileExists('getting-started/hello');
+const pathExists = await __helpers.fileExists(
+  join(project.dashedName, 'hello')
+);
 assert.isFalse(pathExists);
 ```
 
 The `getting-started/hello.rs` file should not exist.
 
 ```js
-const pathExists = __helpers.fileExists('getting-started/hello.rs');
+const pathExists = await __helpers.fileExists(
+  join(project.dashedName, 'hello.rs')
+);
 assert.isFalse(pathExists);
 ```
 
-## 12
+## 11
 
 ### --description--
 
@@ -247,7 +255,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo new hello_cargo');
 ```
 
-## 13
+## 12
 
 ### --description--
 
@@ -265,7 +273,7 @@ const cwd = cwdFile.split('\n').filter(Boolean).pop();
 assert.include(cwd, 'getting-started/hello_cargo');
 ```
 
-## 14
+## 13
 
 ### --description--
 
@@ -284,7 +292,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'ls');
 ```
 
-## 15
+## 14
 
 ### --description--
 
@@ -305,7 +313,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo run');
 ```
 
-## 16
+## 15
 
 ### --description--
 
@@ -325,7 +333,8 @@ Add `author = "<YOUR_NAME>"` to the `Cargo.toml` file.
 
 ```js
 const fileContents = await __helpers.getFile(
-  'getting-started/hello_cargo/Cargo.toml'
+  project.dashedName,
+  'hello_cargo/Cargo.toml'
 );
 assert.notInclude(
   fileContents,
@@ -335,7 +344,7 @@ assert.notInclude(
 assert.match(fileContents, /author\s*=\s*"[^"]+"/);
 ```
 
-## 17
+## 16
 
 ### --description--
 
@@ -354,7 +363,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo run');
 ```
 
-## 18
+## 17
 
 ### --description--
 
@@ -375,7 +384,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo build');
 ```
 
-## 19
+## 18
 
 ### --description--
 
@@ -396,7 +405,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), './target/debug/hello_cargo');
 ```
 
-## 20
+## 19
 
 ### --description--
 
@@ -413,7 +422,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo run');
 ```
 
-## 21
+## 20
 
 ### --description--
 
@@ -434,7 +443,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo check');
 ```
 
-## 22
+## 21
 
 ### --description--
 
@@ -457,7 +466,7 @@ const lastCommand = await __helpers.getLastCommand();
 assert.equal(lastCommand?.trim(), 'cargo build --release');
 ```
 
-## 23
+## 22
 
 ### --description--
 

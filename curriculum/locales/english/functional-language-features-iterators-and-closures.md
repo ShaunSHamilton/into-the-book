@@ -1,6 +1,12 @@
-# Rust - Functional Language Features: Iterators and Closures
+# Functional Language Features: Iterators and Closures
 
-## 1
+```json
+{
+  "tags": ["Coming Soon"]
+}
+```
+
+## 0
 
 ### --description--
 

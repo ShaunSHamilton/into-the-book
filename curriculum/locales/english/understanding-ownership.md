@@ -1,6 +1,8 @@
-# Rust - Understanding Ownership
+# Understanding Ownership
 
-## 1
+Learn about ownership as well as several related features: borrowing, slices, and how Rust lays data out in memory.
+
+## 0
 
 ### --description--
 
@@ -22,7 +24,7 @@ The active terminal should be in the `understanding-ownership/` directory.
 assert.fail('Tests not implemented');
 ```
 
-## 2
+## 1
 
 ### --description--
 
@@ -36,7 +38,7 @@ Create a new project named `ownership`.
 assert.fail('Tests not implemented');
 ```
 
-## 3
+## 2
 
 ### --description--
 
@@ -58,7 +60,7 @@ assert.fail('Tests not implemented');
 cargo new ownership
 ```
 
-## 4
+## 3
 
 ### --description--
 
@@ -83,7 +85,7 @@ fn main() {
 }
 ```
 
-## 5
+## 4
 
 ### --description--
 
@@ -108,7 +110,7 @@ fn main() {
 }
 ```
 
-## 6
+## 5
 
 ### --description--
 
@@ -136,7 +138,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 7
+## 6
 
 ### --description--
 
@@ -170,7 +172,7 @@ fn main() {
 }
 ```
 
-## 8
+## 7
 
 ### --description--
 
@@ -199,7 +201,7 @@ fn main() {
 }
 ```
 
-## 9
+## 8
 
 ### --description--
 
@@ -227,7 +229,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 10
+## 9
 
 ### --description--
 
@@ -256,7 +258,7 @@ fn main() {
 }
 ```
 
-## 11
+## 10
 
 ### --description--
 
@@ -278,7 +280,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 12
+## 11
 
 ### --description--
 
@@ -307,7 +309,7 @@ fn main() {
 }
 ```
 
-## 13
+## 12
 
 ### --description--
 
@@ -335,7 +337,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 14
+## 13
 
 ### --description--
 
@@ -364,7 +366,7 @@ fn main() {
 }
 ```
 
-## 15
+## 14
 
 ### --description--
 
@@ -380,7 +382,7 @@ Move the print of `t` expression to be after the inner block expression.
 assert.fail('Tests not implemented');
 ```
 
-## 16
+## 15
 
 ### --description--
 
@@ -409,7 +411,7 @@ fn main() {
 }
 ```
 
-## 17
+## 16
 
 ### --description--
 
@@ -425,7 +427,7 @@ The code should successfully compile.
 assert.fail('Tests not implemented');
 ```
 
-## 18
+## 17
 
 ### --description--
 
@@ -459,7 +461,7 @@ fn main() {
 }
 ```
 
-## 19
+## 18
 
 ### --description--
 
@@ -485,7 +487,7 @@ fn main() {
 }
 ```
 
-## 20
+## 19
 
 ### --description--
 
@@ -516,7 +518,7 @@ fn main() {
 }
 ```
 
-## 21
+## 20
 
 ### --description--
 
@@ -542,7 +544,7 @@ fn main() {
 }
 ```
 
-## 22
+## 21
 
 ### --description--
 
@@ -568,7 +570,7 @@ fn main() {
 }
 ```
 
-## 23
+## 22
 
 ### --description--
 
@@ -620,7 +622,7 @@ fn main() {
 }
 ```
 
-## 24
+## 23
 
 ### --description--
 
@@ -647,7 +649,7 @@ fn main() {
 }
 ```
 
-## 25
+## 24
 
 ### --description--
 
@@ -667,7 +669,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 26
+## 25
 
 ### --description--
 
@@ -694,7 +696,7 @@ fn main() {
 }
 ```
 
-## 27
+## 26
 
 ### --description--
 
@@ -708,7 +710,7 @@ The `drop` call should be moved to the end of the `main` function.
 assert.fail('Tests not implemented');
 ```
 
-## 28
+## 27
 
 ### --description--
 
@@ -747,7 +749,7 @@ fn main() {
 
 ```
 
-## 29
+## 28
 
 ### --description--
 
@@ -788,7 +790,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 30
+## 29
 
 ### --description--
 
@@ -817,7 +819,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 31
+## 30
 
 ### --description--
 
@@ -839,7 +841,7 @@ The `take_ownership` function should be called immediately before the print expr
 assert.fail('Tests not implemented');
 ```
 
-## 32
+## 31
 
 ### --description--
 
@@ -868,7 +870,7 @@ fn main() {
 fn take_ownership(_some_string: String) {}
 ```
 
-## 33
+## 32
 
 ### --description--
 
@@ -891,7 +893,7 @@ The `take_ownership` call should be moved to the end of the `main` function.
 assert.fail('Tests not implemented');
 ```
 
-## 34
+## 33
 
 ### --description--
 
@@ -917,7 +919,7 @@ fn main() {
 }
 ```
 
-## 35
+## 34
 
 ### --description--
 
@@ -942,7 +944,7 @@ fn main() {
 }
 ```
 
-## 36
+## 35
 
 ### --description--
 
@@ -968,7 +970,7 @@ fn main() {
 }
 ```
 
-## 37
+## 36
 
 ### --description--
 
@@ -995,7 +997,7 @@ fn main() {
 }
 ```
 
-## 38
+## 37
 
 ### --description--
 
@@ -1011,7 +1013,7 @@ The `main` function should contain `let s1 = String::from("hello");`.
 assert.fail('Tests not implemented');
 ```
 
-## 39
+## 38
 
 ### --description--
 
@@ -1040,7 +1042,7 @@ fn main() {
 }
 ```
 
-## 40
+## 39
 
 ### --description--
 
@@ -1070,7 +1072,7 @@ fn main() {
 }
 ```
 
-## 41
+## 40
 
 ### --description--
 
@@ -1100,7 +1102,7 @@ fn main() {
 }
 ```
 
-## 42
+## 41
 
 ### --description--
 
@@ -1129,7 +1131,7 @@ Build the code again to re-read the error.
 assert.fail('Tests not implemented');
 ```
 
-## 43
+## 42
 
 ### --description--
 
@@ -1154,7 +1156,7 @@ The `main` function should contain `let s2 = s1.clone();`.
 assert.fail('Tests not implemented');
 ```
 
-## 44
+## 43
 
 ### --description--
 
@@ -1186,7 +1188,7 @@ fn main() {
 }
 ```
 
-## 45
+## 44
 
 ### --description--
 
@@ -1200,7 +1202,7 @@ The `main` function should contain `let s2 = &s1;`.
 assert.fail('Tests not implemented');
 ```
 
-## 46
+## 45
 
 ### --description--
 
@@ -1232,7 +1234,7 @@ fn main() {
 }
 ```
 
-## 47
+## 46
 
 ### --description--
 
@@ -1280,7 +1282,7 @@ fn main() {
 
 ```
 
-## 48
+## 47
 
 ### --description--
 
@@ -1328,7 +1330,7 @@ fn takes_ownership(some_string: String) {
 
 ```
 
-## 49
+## 48
 
 ### --description--
 
@@ -1366,7 +1368,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 50
+## 49
 
 ### --description--
 
@@ -1386,7 +1388,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 51
+## 50
 
 ### --description--
 
@@ -1424,7 +1426,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 52
+## 51
 
 ### --description--
 
@@ -1440,7 +1442,7 @@ The `main` function should contain `// println!("s = {s}");`.
 assert.fail('Tests not implemented');
 ```
 
-## 53
+## 52
 
 ### --description--
 
@@ -1478,7 +1480,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 54
+## 53
 
 ### --description--
 
@@ -1498,7 +1500,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 55
+## 54
 
 ### --description--
 
@@ -1536,7 +1538,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 56
+## 55
 
 ### --description--
 
@@ -1558,7 +1560,7 @@ assert.fail('Tests not implemented');
 assert.fail('Tests not implemented');
 ```
 
-## 57
+## 56
 
 ### --description--
 
@@ -1596,7 +1598,7 @@ fn makes_copy(some_integer: i32) {
 }
 ```
 
-## 58
+## 57
 
 ### --description--
 
@@ -1637,7 +1639,7 @@ fn main() {
 
 ```
 
-## 59
+## 58
 
 ### --description--
 
@@ -1667,7 +1669,7 @@ fn gives_ownership() -> String {
 
 ```
 
-## 60
+## 59
 
 ### --description--
 
@@ -1697,7 +1699,7 @@ fn gives_ownership() -> String {
 
 ```
 
-## 61
+## 60
 
 ### --description--
 
@@ -1742,7 +1744,7 @@ fn gives_ownership() -> String {
 
 ```
 
-## 62
+## 61
 
 ### --description--
 
@@ -1779,7 +1781,7 @@ fn takes_and_gives_back(a_string: String) -> String {
 }
 ```
 
-## 63
+## 62
 
 ### --description--
 
@@ -1816,7 +1818,7 @@ fn takes_and_gives_back(a_string: String) -> String {
 }
 ```
 
-## 64
+## 63
 
 ### --description--
 
@@ -1832,7 +1834,7 @@ Fix the error by changing the `println!` expression to use `s3` instead of `s2`.
 assert.fail('Tests not implemented');
 ```
 
-## 65
+## 64
 
 ### --description--
 
@@ -1869,7 +1871,7 @@ fn takes_and_gives_back(a_string: String) -> String {
 }
 ```
 
-## 66
+## 65
 
 ### --description--
 
@@ -1889,7 +1891,7 @@ Within `understanding-ownership/`, create a new project called `references`.
 assert.fail('Tests not implemented');
 ```
 
-## 67
+## 66
 
 ### --description--
 
@@ -1922,7 +1924,7 @@ fn main() {
 
 ```
 
-## 68
+## 67
 
 ### --description--
 
@@ -1952,7 +1954,7 @@ fn calculate_length(s: String) -> usize {
 }
 ```
 
-## 69
+## 68
 
 ### --description--
 
@@ -1982,7 +1984,7 @@ fn calculate_length(s: String) -> usize {
 }
 ```
 
-## 70
+## 69
 
 ### --description--
 
@@ -2003,7 +2005,7 @@ The call to `calculate_length` should pass `&s1` instead of `s1`.
 assert.fail('Tests not implemented');
 ```
 
-## 71
+## 70
 
 ### --description--
 
@@ -2033,7 +2035,7 @@ fn calculate_length(s: String) -> usize {
 }
 ```
 
-## 72
+## 71
 
 ### --description--
 
@@ -2055,7 +2057,7 @@ The `calculate_length` function should take a reference to a `String` instead of
 assert.fail('Tests not implemented');
 ```
 
-## 73
+## 72
 
 ### --description--
 
@@ -2085,7 +2087,7 @@ fn calculate_length(s: &String) -> usize {
 }
 ```
 
-## 74
+## 73
 
 ### --description--
 
@@ -2101,7 +2103,7 @@ Run the program to see the output.
 assert.fail('Tests not implemented');
 ```
 
-## 75
+## 74
 
 ### --description--
 
@@ -2134,7 +2136,7 @@ fn main() {
 
 ```
 
-## 76
+## 75
 
 ### --description--
 
@@ -2164,7 +2166,7 @@ fn change(some_string: &String) {
 }
 ```
 
-## 77
+## 76
 
 ### --description--
 
@@ -2194,7 +2196,7 @@ fn change(some_string: &String) {
 }
 ```
 
-## 78
+## 77
 
 ### --description--
 
@@ -2231,7 +2233,7 @@ The `change` function should take a mutable reference to a `String`.
 assert.fail('Tests not implemented');
 ```
 
-## 79
+## 78
 
 ### --description--
 
@@ -2261,7 +2263,7 @@ fn change(some_string: &String) {
 }
 ```
 
-## 80
+## 79
 
 ### --description--
 
@@ -2290,7 +2292,7 @@ fn main() {
 }
 ```
 
-## 81
+## 80
 
 ### --description--
 
@@ -2322,7 +2324,7 @@ fn main() {
 }
 ```
 
-## 82
+## 81
 
 ### --description--
 
@@ -2336,7 +2338,7 @@ The `main` function should declare `r3` as an immutable reference.
 assert.fail('Tests not implemented');
 ```
 
-## 83
+## 82
 
 ### --description--
 
@@ -2364,7 +2366,7 @@ fn main() {
 }
 ```
 
-## 84
+## 83
 
 ### --description--
 
@@ -2393,7 +2395,7 @@ fn main() {
 
 ```
 
-## 85
+## 84
 
 ### --description--
 
@@ -2407,7 +2409,7 @@ The `dangle` function should declare `let s = String::from("hello");`.
 assert.fail('Tests not implemented');
 ```
 
-## 86
+## 85
 
 ### --description--
 
@@ -2436,7 +2438,7 @@ fn dangle() -> &String {
 }
 ```
 
-## 87
+## 86
 
 ### --description--
 
@@ -2465,7 +2467,7 @@ fn dangle() -> &String { // returns a reference to a String
 } // s goes out of scope, and is dropped. Its memory goes away.
 ```
 
-## 88
+## 87
 
 ### --description--
 
@@ -2483,7 +2485,7 @@ The `dangle` function should return `s` instead of `&s`.
 assert.fail('Tests not implemented');
 ```
 
-## 89
+## 88
 
 ### --description--
 
@@ -2512,7 +2514,7 @@ fn dangle() -> String {
 }
 ```
 
-## 90
+## 89
 
 ### --description--
 
@@ -2530,7 +2532,7 @@ Within `understanding-ownership/`, create a new project called `slices`.
 assert.fail('Tests not implemented');
 ```
 
-## 91
+## 90
 
 ### --description--
 
@@ -2557,7 +2559,7 @@ assert.include(lastCommand, 'done');
 cargo new slices
 ```
 
-## 92
+## 91
 
 ### --description--
 
@@ -2599,7 +2601,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 93
+## 92
 
 ### --description--
 
@@ -2640,7 +2642,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 94
+## 93
 
 ### --description--
 
@@ -2682,7 +2684,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 95
+## 94
 
 ### --description--
 
@@ -2724,7 +2726,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 96
+## 95
 
 ### --description--
 
@@ -2769,7 +2771,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 97
+## 96
 
 ### --description--
 
@@ -2812,7 +2814,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 98
+## 97
 
 ### --description--
 
@@ -2864,7 +2866,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 99
+## 98
 
 ### --description--
 
@@ -2906,7 +2908,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 100
+## 99
 
 ### --description--
 
@@ -2950,7 +2952,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 101
+## 100
 
 ### --description--
 
@@ -2994,7 +2996,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 102
+## 101
 
 ### --description--
 
@@ -3036,7 +3038,7 @@ fn first_word(s: &String) -> usize {
 }
 ```
 
-## 103
+## 102
 
 ### --description--
 
@@ -3084,7 +3086,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 104
+## 103
 
 ### --description--
 
@@ -3127,7 +3129,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 105
+## 104
 
 ### --description--
 
@@ -3169,7 +3171,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 106
+## 105
 
 ### --description--
 
@@ -3212,7 +3214,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 107
+## 106
 
 ### --description--
 
@@ -3255,7 +3257,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 108
+## 107
 
 ### --description--
 
@@ -3300,7 +3302,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 109
+## 108
 
 ### --description--
 
@@ -3318,7 +3320,7 @@ The `main` function should not have `s.clear();`.
 assert.fail('Tests not implemented');
 ```
 
-## 110
+## 109
 
 ### --description--
 
@@ -3367,7 +3369,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 111
+## 110
 
 ### --description--
 
@@ -3410,7 +3412,7 @@ fn first_word(s: &String) -> &str {
 }
 ```
 
-## 112
+## 111
 
 ### --description--
 
@@ -3432,7 +3434,7 @@ The `first_word` function should have a signature of `fn first_word(s: &str) -> 
 assert.fail('Tests not implemented');
 ```
 
-## 113
+## 112
 
 ### --description--
 
@@ -3448,7 +3450,7 @@ Run the program.
 assert.fail('Tests not implemented');
 ```
 
-## 114
+## 113
 
 ### --description--
 

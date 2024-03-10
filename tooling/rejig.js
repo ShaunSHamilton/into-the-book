@@ -13,8 +13,7 @@ async function rejigFile(fileName) {
   const file = await readFile(filePath, 'utf-8');
   let lessonNumber = 0;
   const newFile = file.replace(/## \d+/g, () => {
-    lessonNumber++;
-    return `## ${lessonNumber}`;
+    return `## ${lessonNumber++}`;
   });
   await writeFile(filePath, newFile, 'utf-8');
 }

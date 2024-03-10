@@ -1,6 +1,12 @@
-# Rust - Generic Types, Traits, and Lifetimes
+# Generic Types, Traits, and Lifetimes
 
-## 1
+```json
+{
+  "tags": ["Coming Soon"]
+}
+```
+
+## 0
 
 ### --description--
 
