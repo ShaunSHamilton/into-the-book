@@ -13,7 +13,7 @@ This is commonly done by installing `rustup`, a command line tool for managing R
 Open a new terminal, and run the following command:
 
 ```bash
-$ curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh -s -- -y
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ```
 
 ### --tests--
@@ -24,7 +24,7 @@ Run the above command in a new terminal.
 const lastCommand = await __helpers.getLastCommand();
 assert.equal(
   lastCommand?.trim(),
-  "curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh -s -- -y"
+  "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
 );
 ```
 
@@ -44,7 +44,7 @@ Run `rustc --version` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'rustc --version');
+assert.equal(lastCommand?.trim(), "rustc --version");
 ```
 
 ## 2
@@ -65,7 +65,7 @@ Run `rustc --help` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'rustc --help');
+assert.equal(lastCommand?.trim(), "rustc --help");
 ```
 
 ## 3
@@ -84,7 +84,7 @@ Run `rustup update` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'rustup update');
+assert.equal(lastCommand?.trim(), "rustup update");
 ```
 
 ## 4
@@ -105,8 +105,8 @@ You should be in the `getting-started/` directory.
 
 ```js
 const cwdFile = await __helpers.getCWD();
-const cwd = cwdFile.split('\n').filter(Boolean).pop();
-assert.include(cwd, 'getting-started');
+const cwd = cwdFile.split("\n").filter(Boolean).pop();
+assert.include(cwd, "getting-started");
 ```
 
 ## 5
@@ -121,7 +121,7 @@ The `getting-started/hello.rs` file should exist.
 
 ```js
 const pathExists = await __helpers.fileExists(
-  join(project.dashedName, 'hello.rs')
+  join(project.dashedName, "hello.rs")
 );
 assert.isTrue(pathExists);
 ```
@@ -143,10 +143,10 @@ fn main() {
 The `getting-started/hello.rs` file should contain the above code:
 
 ```js
-const fileContents = await __helpers.getFile(project.dashedName, 'hello.rs');
-assert.include(fileContents, 'fn main() {');
+const fileContents = await __helpers.getFile(project.dashedName, "hello.rs");
+assert.include(fileContents, "fn main() {");
 assert.include(fileContents, 'println!("Hello, world!");');
-assert.include(fileContents, '}');
+assert.include(fileContents, "}");
 ```
 
 ## 7
@@ -165,7 +165,7 @@ Run `rustc hello.rs` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'rustc hello.rs');
+assert.equal(lastCommand?.trim(), "rustc hello.rs");
 ```
 
 ## 8
@@ -186,7 +186,7 @@ Run `./hello` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), './hello');
+assert.equal(lastCommand?.trim(), "./hello");
 ```
 
 ## 9
@@ -207,7 +207,7 @@ Run `cargo --version` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo --version');
+assert.equal(lastCommand?.trim(), "cargo --version");
 ```
 
 ## 10
@@ -222,7 +222,7 @@ The `getting-started/hello` file should not exist.
 
 ```js
 const pathExists = await __helpers.fileExists(
-  join(project.dashedName, 'hello')
+  join(project.dashedName, "hello")
 );
 assert.isFalse(pathExists);
 ```
@@ -231,7 +231,7 @@ The `getting-started/hello.rs` file should not exist.
 
 ```js
 const pathExists = await __helpers.fileExists(
-  join(project.dashedName, 'hello.rs')
+  join(project.dashedName, "hello.rs")
 );
 assert.isFalse(pathExists);
 ```
@@ -252,7 +252,7 @@ Run `cargo new hello_cargo` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo new hello_cargo');
+assert.equal(lastCommand?.trim(), "cargo new hello_cargo");
 ```
 
 ## 12
@@ -269,8 +269,8 @@ You should be in the `getting-started/hello_cargo/` directory.
 
 ```js
 const cwdFile = await __helpers.getCWD();
-const cwd = cwdFile.split('\n').filter(Boolean).pop();
-assert.include(cwd, 'getting-started/hello_cargo');
+const cwd = cwdFile.split("\n").filter(Boolean).pop();
+assert.include(cwd, "getting-started/hello_cargo");
 ```
 
 ## 13
@@ -289,7 +289,7 @@ Run `ls` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'ls');
+assert.equal(lastCommand?.trim(), "ls");
 ```
 
 ## 14
@@ -310,7 +310,7 @@ Run `cargo run` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo run');
+assert.equal(lastCommand?.trim(), "cargo run");
 ```
 
 ## 15
@@ -334,7 +334,7 @@ Add `author = "<YOUR_NAME>"` to the `Cargo.toml` file.
 ```js
 const fileContents = await __helpers.getFile(
   project.dashedName,
-  'hello_cargo/Cargo.toml'
+  "hello_cargo/Cargo.toml"
 );
 assert.notInclude(
   fileContents,
@@ -360,7 +360,7 @@ Run `cargo run` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo run');
+assert.equal(lastCommand?.trim(), "cargo run");
 ```
 
 ## 17
@@ -381,7 +381,7 @@ Run `cargo build` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo build');
+assert.equal(lastCommand?.trim(), "cargo build");
 ```
 
 ## 18
@@ -402,7 +402,7 @@ Run `./target/debug/hello_cargo` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), './target/debug/hello_cargo');
+assert.equal(lastCommand?.trim(), "./target/debug/hello_cargo");
 ```
 
 ## 19
@@ -419,7 +419,7 @@ Run `cargo run` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo run');
+assert.equal(lastCommand?.trim(), "cargo run");
 ```
 
 ## 20
@@ -440,7 +440,7 @@ Run `cargo check` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo check');
+assert.equal(lastCommand?.trim(), "cargo check");
 ```
 
 ## 21
@@ -463,7 +463,7 @@ Run `cargo build --release` in the terminal.
 
 ```js
 const lastCommand = await __helpers.getLastCommand();
-assert.equal(lastCommand?.trim(), 'cargo build --release');
+assert.equal(lastCommand?.trim(), "cargo build --release");
 ```
 
 ## 22
@@ -487,7 +487,7 @@ This is a great time to build a more substantial program to get used to reading 
 🦀 🚀
 
 ```js
-assert.fail('Chapter 1 complete!');
+assert.fail("Chapter 1 complete!");
 ```
 
 ## --fcc-end--

@@ -4,7 +4,7 @@
     "dashedName": "getting-started",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 23
@@ -14,7 +14,7 @@
     "dashedName": "programming-a-guessing-game",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 42
@@ -24,7 +24,7 @@
     "dashedName": "common-programming-concepts",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 121
@@ -34,7 +34,7 @@
     "dashedName": "understanding-ownership",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": true,
     "seedEveryLesson": true,
@@ -45,7 +45,7 @@
     "dashedName": "using-structs-to-structure-related-data",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "seedEveryLesson": true,
     "isResetEnabled": false,
@@ -56,7 +56,7 @@
     "dashedName": "enums-and-pattern-matching",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -66,7 +66,7 @@
     "dashedName": "managing-growing-projects-with-packages-crates-and-modules",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -76,7 +76,7 @@
     "dashedName": "common-collections",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -86,7 +86,7 @@
     "dashedName": "error-handling",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -96,7 +96,7 @@
     "dashedName": "generic-types-traits-and-lifetimes",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -106,7 +106,7 @@
     "dashedName": "writing-automated-tests",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -116,7 +116,7 @@
     "dashedName": "an-io-project-building-a-command-line-program",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -126,7 +126,7 @@
     "dashedName": "functional-language-features-iterators-and-closures",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -136,7 +136,7 @@
     "dashedName": "more-about-cargo-and-crates-io",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -146,7 +146,7 @@
     "dashedName": "smart-pointers",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -156,7 +156,7 @@
     "dashedName": "fearless-concurrency",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -166,7 +166,7 @@
     "dashedName": "object-oriented-programming-features-of-rust",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -176,7 +176,7 @@
     "dashedName": "patterns-and-matching",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -186,7 +186,7 @@
     "dashedName": "advanced-features",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1
@@ -196,7 +196,7 @@
     "dashedName": "final-project-building-a-multithreaded-web-server",
     "isIntegrated": false,
     "isPublic": false,
-    "currentLesson": 1,
+    "currentLesson": 0,
     "runTestsOnWatch": true,
     "isResetEnabled": false,
     "numberOfLessons": 1

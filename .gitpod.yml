@@ -4,6 +4,7 @@ image:
 # Commands to start on workspace startup
 tasks:
   - init: npm ci
+  - command: node tooling/adjust-url.js
 
 ports:
   - port: 8080
